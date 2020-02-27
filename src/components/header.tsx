@@ -26,6 +26,16 @@ interface ButtonProps {
     title: string;
 }
 
+const Button: FunctionComponent<ButtonProps> = ({
+    src,
+    alt,
+    title,
+}: ButtonProps): ReactElement => (
+    <button>
+        <img className="w-12" src={src} alt={alt} title={title}></img>
+    </button>
+);
+
 interface HeaderProps {
     siteTitle: string;
 }
