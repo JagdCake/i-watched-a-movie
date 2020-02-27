@@ -3,6 +3,7 @@ import React from 'react';
 import { FunctionComponent } from 'react';
 import { ReactElement } from 'react';
 import aboutIcon from '../images/about.svg';
+import searchIcon from '../images/search.svg';
 
 interface TitleHeadingProp {
     title: string;
