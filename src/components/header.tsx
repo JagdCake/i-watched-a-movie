@@ -2,6 +2,7 @@ import { Link } from 'gatsby';
 import React from 'react';
 import { FunctionComponent } from 'react';
 import { ReactElement } from 'react';
+import aboutIcon from '../images/about.svg';
 
 interface TitleHeadingProp {
     title: string;
