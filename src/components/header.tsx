@@ -27,7 +27,9 @@ interface HeaderProps {
 const Header: FunctionComponent<HeaderProps> = ({
     siteTitle,
 }: HeaderProps): ReactElement => (
-    <header className="py-4 px-2 border-b-2 border-black bg-red-500"></header>
+    <header className="py-4 px-2 border-b-2 border-black bg-red-500">
+        <TitleHeading title={siteTitle} />
+    </header>
 );
 
 export default Header;
