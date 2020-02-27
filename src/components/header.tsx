@@ -45,6 +45,8 @@ const Header: FunctionComponent<HeaderProps> = ({
 }: HeaderProps): ReactElement => (
     <header className="py-4 px-2 border-b-2 border-black bg-red-500">
         <TitleHeading title={siteTitle} />
+
+        <nav className="flex justify-between items-center"></nav>
     </header>
 );
 
