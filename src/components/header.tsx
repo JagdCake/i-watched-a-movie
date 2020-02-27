@@ -7,6 +7,19 @@ interface TitleHeadingProp {
     title: string;
 }
 
+const TitleHeading: FunctionComponent<TitleHeadingProp> = ({
+    title,
+}): ReactElement => (
+    <h1 className="text-center text-xl font-medium tracking-wide">
+        <Link
+            className="hover:font-black focus:font-black active:font-black"
+            to="/"
+        >
+            {title}
+        </Link>
+    </h1>
+);
+
 interface HeaderProps {
     siteTitle: string;
 }
