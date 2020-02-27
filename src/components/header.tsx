@@ -74,6 +74,8 @@ const Header: FunctionComponent<HeaderProps> = ({
                 alt="Question mark icon"
                 title="Open the About section"
             ></Button>
+
+            <SearchBox value="the number of movies" disabledStatus={true} />
         </nav>
     </header>
 );
