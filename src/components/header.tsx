@@ -37,6 +37,13 @@ const Button: FunctionComponent<ButtonProps> = ({
     </button>
 );
 
+interface SearchBoxProps {
+    value?: string;
+    disabledStatus?: boolean;
+    // the "id" of a datalist element
+    datalistId?: string;
+}
+
 interface HeaderProps {
     siteTitle: string;
 }
