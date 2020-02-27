@@ -3,6 +3,10 @@ import React from 'react';
 import { FunctionComponent } from 'react';
 import { ReactElement } from 'react';
 
+interface TitleHeadingProp {
+    title: string;
+}
+
 interface HeaderProps {
     siteTitle: string;
 }
