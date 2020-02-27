@@ -77,6 +77,12 @@ const Header: FunctionComponent<HeaderProps> = ({
             ></Button>
 
             <SearchBox value="the number of movies" disabledStatus={true} />
+
+            <Button
+                src={searchIcon}
+                alt="Magnifying glass icon"
+                title="Enable search box"
+            ></Button>
         </nav>
     </header>
 );
