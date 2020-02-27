@@ -20,6 +20,12 @@ const TitleHeading: FunctionComponent<TitleHeadingProp> = ({
     </h1>
 );
 
+interface ButtonProps {
+    src: string;
+    alt: string;
+    title: string;
+}
+
 interface HeaderProps {
     siteTitle: string;
 }
