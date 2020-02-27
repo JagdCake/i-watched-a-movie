@@ -47,7 +47,13 @@ const Header: FunctionComponent<HeaderProps> = ({
     <header className="py-4 px-2 border-b-2 border-black bg-red-500">
         <TitleHeading title={siteTitle} />
 
-        <nav className="flex justify-between items-center"></nav>
+        <nav className="flex justify-between items-center">
+            <Button
+                src={aboutIcon}
+                alt="Question mark icon"
+                title="Open the About section"
+            ></Button>
+        </nav>
     </header>
 );
 
