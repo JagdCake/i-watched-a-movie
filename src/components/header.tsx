@@ -61,35 +61,33 @@ const SearchBox: FunctionComponent<SearchBoxProps> = ({
 
 interface GeneralInfoProps {
     siteDescription: string;
-    movieDescriptionItems: [string];
+    movieEntryItems: [string];
 }
 
 const GeneralInfo: FunctionComponent<GeneralInfoProps> = ({
     siteDescription,
-    movieDescriptionItems,
+    movieEntryItems,
 }: GeneralInfoProps): ReactElement => {
-    const descriptionItems: ReactElement[] = movieDescriptionItems.map(
-        (item, index) => {
-            const itemsFirstCharacter: string = item[0];
-            const itemStartsWithQuote: boolean = itemsFirstCharacter.includes('"');
+    const entryItems: ReactElement[] = movieEntryItems.map((item, index) => {
+        const itemsFirstCharacter: string = item[0];
+        const itemStartsWithQuote: boolean = itemsFirstCharacter.includes('"');
 
-            if (itemStartsWithQuote) {
-                return (
-                    <li className="text-indent-quote" key={index}>
-                        {item}
-                    </li>
-                );
-            }
-
-            return <li key={index}>{item}</li>;
+        if (itemStartsWithQuote) {
+            return (
+                <li className="text-indent-quote" key={index}>
+                    {item}
+                </li>
+            );
         }
-    );
+
+        return <li key={index}>{item}</li>;
+    });
 
     return (
         <>
             <p className="mb-2">{siteDescription}</p>
 
-            <ol className="list-decimal list-outside">{descriptionItems}</ol>
+            <ol className="list-decimal list-outside">{entryItems}</ol>
         </>
     );
 };
@@ -125,7 +123,7 @@ const Header: FunctionComponent<HeaderProps> = ({
                 <GeneralInfo
                     siteDescription="This is my personal movie catalogue. The idea is to catalogue
                     every movie I (re)watch by creating entries which include 5 elements:"
-                    movieDescriptionItems={[
+                    movieEntryItems={[
                         'Info card',
                         'My rating',
                         '"Watched on" date',
