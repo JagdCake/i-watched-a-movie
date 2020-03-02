@@ -134,6 +134,38 @@ interface ContactInfoProps {
     contactLinks: [[Link, LinkName]];
 }
 
+const ContactInfo: FunctionComponent<ContactInfoProps> = ({
+    email,
+    contactLinks,
+}: ContactInfoProps): ReactElement => {
+    const links: ReactElement[] = contactLinks.map((link, index) => {
+        const url = link[0];
+        const linkName = link[1];
+
+        return (
+            <li key={index}>
+                <a className="block underline mb-3" href={url}>
+                    {linkName}
+                </a>
+            </li>
+        );
+    });
+
+    return (
+        <>
+            <h1 className="font-bold text-center mb-2">Contact</h1>
+
+            <address className="mb-3">
+                <a className="not-italic" href={`mailto:${email}`}>
+                    {email}
+                </a>
+            </address>
+
+            <ul className="list-outside">{links}</ul>
+        </>
+    );
+};
+
 interface HeaderProps {
     siteTitle: string;
 }
