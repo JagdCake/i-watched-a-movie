@@ -92,6 +92,9 @@ const GeneralInfo: FunctionComponent<GeneralInfoProps> = ({
     );
 };
 
+type MyRating = string;
+type RangeOfIMDbRatings = [number, number];
+
 interface HeaderProps {
     siteTitle: string;
 }
