@@ -95,6 +95,10 @@ const GeneralInfo: FunctionComponent<GeneralInfoProps> = ({
 type MyRating = string;
 type RangeOfIMDbRatings = [number, number];
 
+interface RatingSystemProp {
+    ratings: [[MyRating, RangeOfIMDbRatings]];
+}
+
 interface HeaderProps {
     siteTitle: string;
 }
