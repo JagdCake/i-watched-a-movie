@@ -99,6 +99,33 @@ interface RatingSystemProp {
     ratings: [[MyRating, RangeOfIMDbRatings]];
 }
 
+const RatingSystem: FunctionComponent<RatingSystemProp> = ({
+    ratings,
+}: RatingSystemProp): ReactElement => {
+    const ratingItems: ReactElement[] = ratings.map((item, index) => {
+        const myRating = item[0];
+        const [IMDbRangeStart, IMDbRangeEnd] = item[1];
+
+        return (
+            <li key={index}>
+                {myRating} = &nbsp;
+                <span className="font-mono">
+                    {IMDbRangeStart}–{IMDbRangeEnd}
+                </span>
+                <span>&nbsp;IMDb stars</span>
+            </li>
+        );
+    });
+
+    return (
+        <>
+            <h1 className="font-bold text-center mb-2">Rating system</h1>
+
+            <ul className="list-disc list-outside">{ratingItems}</ul>
+        </>
+    );
+};
+
 interface HeaderProps {
     siteTitle: string;
 }
