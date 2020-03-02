@@ -70,7 +70,10 @@ const GeneralInfo: FunctionComponent<GeneralInfoProps> = ({
 }: GeneralInfoProps): ReactElement => {
     const descriptionItems: ReactElement[] = movieDescriptionItems.map(
         (item, index) => {
-            if (item[0].includes('"')) {
+            const itemsFirstCharacter: string = item[0];
+            const itemStartsWithQuote: boolean = itemsFirstCharacter.includes('"');
+
+            if (itemStartsWithQuote) {
                 return (
                     <li className="text-indent-quote" key={index}>
                         {item}
