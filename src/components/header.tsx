@@ -166,6 +166,22 @@ const Header: FunctionComponent<HeaderProps> = ({
                     ]}
                 />
             </section>
+
+            <section
+                aria-label="Rating system"
+                className="py-3 pl-4 border-b border-black"
+            >
+                <RatingSystem
+                    ratings={[
+                        ['Bad Eggplant', [1, 3.9]],
+                        ['Decent Carrot', [4, 4.9]],
+                        ['Good Tomato', [5, 5.9]],
+                        ['Great Onion', [6, 7.8]],
+                        ['Amazing Savory', [7.9, 8.9]],
+                        ['Sublime Lettuce', [9, 10]],
+                    ]}
+                />
+            </section>
         </article>
     </header>
 );
