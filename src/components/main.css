@@ -3,3 +3,7 @@
 @tailwind components;
 
 @tailwind utilities;
+
+.text-indent-quote {
+    text-indent: -0.3em;
+}
