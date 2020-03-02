@@ -86,11 +86,11 @@ const GeneralInfo: FunctionComponent<GeneralInfoProps> = ({
     );
 
     return (
-        <section className="py-3 pl-4 border-b border-black">
+        <>
             <p className="mb-2">{siteDescription}</p>
 
             <ol className="list-decimal list-outside">{descriptionItems}</ol>
-        </section>
+        </>
     );
 };
 
@@ -121,17 +121,19 @@ const Header: FunctionComponent<HeaderProps> = ({
         </nav>
 
         <article aria-label="About section">
-            <GeneralInfo
-                siteDescription="This is my personal movie catalogue. The idea is to catalogue
-                every movie I (re)watch by creating entries which include 5 elements:"
-                movieDescriptionItems={[
-                    'Info card',
-                    'My rating',
-                    '"Watched on" date',
-                    'Movie discussion or reviews',
-                    'IMDb link',
-                ]}
-            />
+            <section className="py-3 pl-4 border-b border-black">
+                <GeneralInfo
+                    siteDescription="This is my personal movie catalogue. The idea is to catalogue
+                    every movie I (re)watch by creating entries which include 5 elements:"
+                    movieDescriptionItems={[
+                        'Info card',
+                        'My rating',
+                        '"Watched on" date',
+                        'Movie discussion or reviews',
+                        'IMDb link',
+                    ]}
+                />
+            </section>
         </article>
     </header>
 );
