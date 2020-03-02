@@ -153,7 +153,10 @@ const Header: FunctionComponent<HeaderProps> = ({
         </nav>
 
         <article aria-label="About section">
-            <section className="py-3 pl-4 border-b border-black">
+            <section
+                aria-label="General information"
+                className="py-3 pl-4 border-b border-black"
+            >
                 <GeneralInfo
                     siteDescription="This is my personal movie catalogue. The idea is to catalogue
                     every movie I (re)watch by creating entries which include 5 elements:"
