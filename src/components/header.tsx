@@ -108,6 +108,20 @@ const Header: FunctionComponent<HeaderProps> = ({
                 title="Enable search box"
             ></Button>
         </nav>
+
+        <article aria-label="About section">
+            <GeneralInfo
+                siteDescription="This is my personal movie catalogue. The idea is to catalogue
+                every movie I (re)watch by creating entries which include 5 elements:"
+                movieDescriptionItems={[
+                    'Info card',
+                    'My rating',
+                    '"Watched on" date',
+                    'Movie discussion or reviews',
+                    'IMDb link',
+                ]}
+            />
+        </article>
     </header>
 );
 
