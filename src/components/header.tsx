@@ -126,6 +126,9 @@ const RatingSystem: FunctionComponent<RatingSystemProp> = ({
     );
 };
 
+type Link = string;
+type LinkName = string;
+
 interface HeaderProps {
     siteTitle: string;
 }
