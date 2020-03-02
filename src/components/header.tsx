@@ -59,6 +59,11 @@ const SearchBox: FunctionComponent<SearchBoxProps> = ({
     ></input>
 );
 
+interface GeneralInfoProps {
+    siteDescription: string;
+    movieDescriptionItems: [string];
+}
+
 interface HeaderProps {
     siteTitle: string;
 }
