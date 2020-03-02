@@ -64,6 +64,25 @@ interface GeneralInfoProps {
     movieDescriptionItems: [string];
 }
 
+const GeneralInfo: FunctionComponent<GeneralInfoProps> = ({
+    siteDescription,
+    movieDescriptionItems,
+}: GeneralInfoProps): ReactElement => {
+    const descriptionItems: ReactElement[] = movieDescriptionItems.map(
+        (item, index) => {
+            return <li key={index}>{item}</li>;
+        }
+    );
+
+    return (
+        <section className="py-3 pl-4 border-b border-black">
+            <p className="mb-2">{siteDescription}</p>
+
+            <ol className="list-decimal list-outside">{descriptionItems}</ol>
+        </section>
+    );
+};
+
 interface HeaderProps {
     siteTitle: string;
 }
