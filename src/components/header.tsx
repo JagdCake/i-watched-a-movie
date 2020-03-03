@@ -225,6 +225,22 @@ const Header: FunctionComponent<HeaderProps> = ({
                     ]}
                 />
             </section>
+
+            <footer aria-label="Contact information" className="py-3 pl-4">
+                <ContactInfo
+                    email="jc@jagdcake.com"
+                    contactLinks={[
+                        [
+                            'https://github.com/JagdCake/site.movies',
+                            'GitHub repository',
+                        ],
+                        [
+                            'https://data.jagdcake.com/',
+                            'Data on watched movies',
+                        ],
+                    ]}
+                />
+            </footer>
         </article>
     </header>
 );
