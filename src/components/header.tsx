@@ -155,7 +155,7 @@ const ContactInfo: FunctionComponent<ContactInfoProps> = ({
         <>
             <h1 className="font-bold text-center mb-2">Contact</h1>
 
-            <address className="mb-3">
+            <address className="mb-3 text-center">
                 <a className="not-italic" href={`mailto:${email}`}>
                     {email}
                 </a>
