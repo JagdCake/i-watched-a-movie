@@ -126,12 +126,12 @@ const RatingSystem: FunctionComponent<RatingSystemProp> = ({
     );
 };
 
-type Link = string;
+type LinkUrl = string;
 type LinkName = string;
 
 interface ContactInfoProps {
     email: string;
-    contactLinks: [[Link, LinkName]];
+    contactLinks: [[LinkUrl, LinkName]];
 }
 
 const ContactInfo: FunctionComponent<ContactInfoProps> = ({
