@@ -32,7 +32,7 @@ const Layout: FunctionComponent<LayoutProps> = ({
     `);
 
     return (
-        <>
+        <div className="text-black">
             <Header siteTitle={data.site.siteMetadata.title} />
             <div className="mx-auto max-w-4xl pt-0 px-4 pb-6">
                 <main>{children}</main>
@@ -47,7 +47,7 @@ const Layout: FunctionComponent<LayoutProps> = ({
                     </a>
                 </footer>
             </div>
-        </>
+        </div>
     );
 };
 
