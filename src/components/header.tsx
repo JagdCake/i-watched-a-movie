@@ -161,7 +161,7 @@ const ContactInfo: FunctionComponent<ContactInfoProps> = ({
                 </a>
             </address>
 
-            <ul className="list-outside">{links}</ul>
+            <ul className="list-outside list-disc">{links}</ul>
         </>
     );
 };
