@@ -7,7 +7,7 @@ interface InfoCardProps {
     title: string;
     yearOfRelease: number;
     directors: [string];
-    topActors: [string];
+    topActors: [string, string];
 }
 
 interface MiscMetadataProps {
