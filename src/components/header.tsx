@@ -126,7 +126,7 @@ const RatingSystem: FunctionComponent<RatingSystemProp> = ({
     );
 };
 
-type LinkUrl = string;
+export type LinkUrl = string;
 type LinkName = string;
 
 interface ContactInfoProps {
