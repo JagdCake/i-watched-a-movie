@@ -68,6 +68,38 @@ interface MiscMetadataProps {
     imdbId: string;
 }
 
+const MiscMetadata: FunctionComponent<MiscMetadataProps> = ({
+    myRating,
+    watchedOn,
+    discussion,
+    imdbId,
+}: MiscMetadataProps): ReactElement => (
+    <ul className="inline-block bg-red-500 border border-black rounded-sm w-3/4 mt-2">
+        <li aria-label="my rating" className="border-b border-black">
+            {myRating}
+        </li>
+        <li aria-label="watched on date" className="border-b border-black">
+            <time dateTime={watchedOn}>{watchedOn}</time>
+        </li>
+        <li
+            aria-label="link to discussion / reviews"
+            className="border-b border-black"
+        >
+            <a href={discussion} className="underline">
+                Discussion
+            </a>
+        </li>
+        <li aria-label="link to movie's IMDb page">
+            <a
+                href={`https://www.imdb.com/title/${imdbId}`}
+                className="underline"
+            >
+                IMDb link
+            </a>
+        </li>
+    </ul>
+);
+
 interface MovieProps extends InfoCardProps, MiscMetadataProps {
     id: number;
 }
