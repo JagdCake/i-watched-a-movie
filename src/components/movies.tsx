@@ -103,3 +103,34 @@ const MiscMetadata: FunctionComponent<MiscMetadataProps> = ({
 interface MovieProps extends InfoCardProps, MiscMetadataProps {
     id: number;
 }
+
+const Movie: FunctionComponent<MovieProps> = (
+    props: MovieProps
+): ReactElement => (
+    <>
+        <div aria-label="Movie entry" id={props.id.toString()} className="m-6">
+            <section
+                aria-label="Movie info card"
+                className="border border-red-500 bg-white"
+            >
+                <InfoCard
+                    title={props.title}
+                    yearOfRelease={props.yearOfRelease}
+                    directors={props.directors}
+                    topActors={props.topActors}
+                />
+            </section>
+
+            <section aria-label="Misc movie metadata" className="text-2xl">
+                <MiscMetadata
+                    myRating={props.myRating}
+                    watchedOn={props.watchedOn}
+                    discussion={props.discussion}
+                    imdbId={props.imdbId}
+                />
+            </section>
+
+            <div className="separator mt-6 h-px"></div>
+        </div>
+    </>
+);
