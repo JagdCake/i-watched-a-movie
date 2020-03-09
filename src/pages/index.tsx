@@ -1,12 +1,31 @@
 import React from 'react';
 import { FunctionComponent } from 'react';
 import { ReactElement } from 'react';
-import { Link } from 'gatsby';
+import { Link, graphql } from 'gatsby';
 
 import Layout from '../components/layout';
 import Image from '../components/image';
 import SEO from '../components/seo';
 
+
+export const query = graphql`
+    query AllMovies {
+        postgres {
+            allMoviesList(orderBy: ID_DESC) {
+                id
+                title
+                yearOfRelease
+                directors
+                topActors
+                myRating
+                watchedOn
+                imdbId
+                discussion
+            }
+        }
+    }
+`;
+ 
 const IndexPage: FunctionComponent = (): ReactElement => (
     <Layout>
         <SEO title="Home" />
