@@ -7,3 +7,7 @@
 .text-indent-quote {
     text-indent: -0.3em;
 }
+
+.separator {
+    background-image: linear-gradient(to right, transparent, #d05353, transparent);
+}
