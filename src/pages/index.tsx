@@ -25,7 +25,27 @@ export const query = graphql`
         }
     }
 `;
- 
+
+interface MovieData {
+    data: {
+        postgres: {
+            allMoviesList: [
+                {
+                    id: number;
+                    title: string;
+                    yearOfRelease: number;
+                    directors: string;
+                    topActors: string;
+                    myRating: string;
+                    watchedOn: string;
+                    imdbId: string;
+                    discussion: string;
+                }
+            ];
+        };
+    };
+}
+
 const IndexPage: FunctionComponent = (): ReactElement => (
     <Layout>
         <SEO title="Home" />
