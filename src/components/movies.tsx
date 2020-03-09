@@ -138,3 +138,35 @@ const Movie: FunctionComponent<MovieProps> = (
 interface MovieTrioProp {
     movies: [MovieProps, MovieProps, MovieProps];
 }
+
+const MovieTrio: FunctionComponent<MovieTrioProp> = ({
+    movies,
+}: MovieTrioProp): ReactElement => {
+    const threeMovies: ReactElement[] = movies.map((movie) => (
+        <Movie
+            key={movie.id}
+            id={movie.id}
+            title={movie.title}
+            yearOfRelease={movie.yearOfRelease}
+            directors={movie.directors}
+            topActors={movie.topActors}
+            myRating={movie.myRating}
+            watchedOn={movie.watchedOn}
+            discussion={movie.discussion}
+            imdbId={movie.imdbId}
+        />
+    ));
+
+    return (
+        <>
+            <div className="separator mt-6 h-px"></div>
+
+            <article aria-label="Movie trio" className="text-center">
+                {threeMovies}
+                <div className="separator mt-6 h-px"></div>
+            </article>
+        </>
+    );
+};
+
+export default MovieTrio;
