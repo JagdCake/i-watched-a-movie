@@ -134,3 +134,7 @@ const Movie: FunctionComponent<MovieProps> = (
         </div>
     </>
 );
+
+interface MovieTrioProp {
+    movies: [MovieProps, MovieProps, MovieProps];
+}
