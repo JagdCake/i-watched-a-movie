@@ -34,19 +34,9 @@ const Layout: FunctionComponent<LayoutProps> = ({
     return (
         <div className="text-black">
             <Header siteTitle={data.site.siteMetadata.title} />
-            <div className="mx-auto max-w-4xl pt-0 px-4 pb-6">
-                <main>{children}</main>
-                <footer>
-                    © {new Date().getFullYear()}, Built with
-                    {` `}
-                    <a
-                        className="underline text-blue-500"
-                        href="https://www.gatsbyjs.org"
-                    >
-                        Gatsby
-                    </a>
-                </footer>
-            </div>
+            <main className="w-full flex flex-wrap justify-center">
+                {children}
+            </main>
         </div>
     );
 };
