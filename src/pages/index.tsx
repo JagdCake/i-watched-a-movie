@@ -112,9 +112,6 @@ const IndexPage: FunctionComponent<MovieData> = ({
         <Layout>
             <SEO title="Home" />
             {movieTrios}
-            <Link className="underline text-blue-500" to="/page-2/">
-                Go to page 2
-            </Link>
         </Layout>
     );
 };
