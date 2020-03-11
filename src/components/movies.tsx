@@ -6,7 +6,7 @@ import { LinkUrl } from './header';
 interface InfoCardProps {
     title: string;
     yearOfRelease: number;
-    directors: [string];
+    directors: string[];
     topActors: [string, string];
 }
 
