@@ -67,6 +67,31 @@ const movieList = (movieData: MovieData): MovieProps[] => {
     return movies;
 };
 
+type RecursiveFunction = Function;
+
+// Split the list of movies into a list of movie triples.
+const moviesAsTrios: RecursiveFunction = (
+    targetNumberOfTrios: number,
+    movieList: MovieProps[],
+    trios: MovieTrioProp[]
+) => {
+    const numberOfTrios = trios.length;
+
+    if (targetNumberOfTrios === numberOfTrios) {
+        return trios;
+    }
+
+    const [firstMovie, secondMovie, thirdMovie] = movieList.slice(0, 3);
+    const movieTrio: MovieTrioProp = {
+        movies: [firstMovie, secondMovie, thirdMovie],
+    };
+
+    const restOfMovies: MovieProps[] = movieList.slice(3);
+    const movieTrios: MovieTrioProp[] = trios.concat(new Array(movieTrio));
+
+    return moviesAsTrios(targetNumberOfTrios, restOfMovies, movieTrios);
+};
+
 const IndexPage: FunctionComponent = (): ReactElement => (
     <Layout>
         <SEO title="Home" />
