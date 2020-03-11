@@ -92,7 +92,7 @@ const moviesAsTrios: RecursiveFunction = (
     return moviesAsTrios(targetNumberOfTrios, restOfMovies, movieTrios);
 };
 
-const IndexPage: FunctionComponent<MovieData> = ({
+const MovieTriosPage: FunctionComponent<MovieData> = ({
     data,
 }: MovieData): ReactElement => {
     const movies: MovieProps[] = movieList({ data });
@@ -115,4 +115,4 @@ const IndexPage: FunctionComponent<MovieData> = ({
     );
 };
 
-export default IndexPage;
+export default MovieTriosPage;
