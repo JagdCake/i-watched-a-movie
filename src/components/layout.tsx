@@ -32,7 +32,7 @@ const Layout: FunctionComponent<LayoutProps> = ({
     `);
 
     return (
-        <div className="text-black">
+        <div className="text-black bg-black">
             <Header siteTitle={data.site.siteMetadata.title} />
             <main className="w-full flex flex-wrap justify-center">
                 {children}
