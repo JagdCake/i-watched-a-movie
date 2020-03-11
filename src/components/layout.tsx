@@ -35,7 +35,7 @@ const Layout: FunctionComponent<LayoutProps> = ({
         <div className="text-black bg-black">
             <Header siteTitle={data.site.siteMetadata.title} />
             <main className="w-full flex flex-wrap justify-center">
-                <div className="separator mt-6 h-px"></div>
+                <div className="separator w-full mt-6 h-px"></div>
                 {children}
             </main>
         </div>
