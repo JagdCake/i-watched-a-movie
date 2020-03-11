@@ -159,8 +159,6 @@ const MovieTrio: FunctionComponent<MovieTrioProp> = ({
 
     return (
         <>
-            <div className="separator mt-6 h-px"></div>
-
             <article aria-label="Movie trio" className="text-center">
                 {threeMovies}
                 <div className="separator mt-6 h-px"></div>
