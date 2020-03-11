@@ -46,6 +46,26 @@ interface MovieData {
     };
 }
 
+// Convert the directors and actors fields into arrays so they can be
+// used by the MovieTrio component.
+const movieList = (movieData: MovieData): MovieProps[] => {
+    const movies = movieData.data.postgres.allMoviesList.map((movie) => {
+        return {
+            id: movie.id,
+            title: movie.title,
+            yearOfRelease: movie.yearOfRelease,
+            directors: movie.directors.split(','),
+            topActors: movie.topActors.split(',') as [string, string],
+            myRating: movie.myRating,
+            watchedOn: movie.watchedOn,
+            imdbId: movie.imdbId,
+            discussion: movie.discussion,
+        };
+    });
+
+    return movies;
+};
+
 const IndexPage: FunctionComponent = (): ReactElement => (
     <Layout>
         <SEO title="Home" />
