@@ -1,10 +1,9 @@
 import React from 'react';
 import { FunctionComponent } from 'react';
 import { ReactElement } from 'react';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 
 import Layout from '../components/layout';
-import Image from '../components/image';
 import SEO from '../components/seo';
 import MovieTrio from '../components/movies';
 import { MovieProps } from '../components/movies';
