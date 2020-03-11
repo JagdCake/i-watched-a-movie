@@ -100,7 +100,7 @@ const MiscMetadata: FunctionComponent<MiscMetadataProps> = ({
     </ul>
 );
 
-interface MovieProps extends InfoCardProps, MiscMetadataProps {
+export interface MovieProps extends InfoCardProps, MiscMetadataProps {
     id: number;
 }
 
@@ -135,7 +135,7 @@ const Movie: FunctionComponent<MovieProps> = (
     </>
 );
 
-interface MovieTrioProp {
+export interface MovieTrioProp {
     movies: [MovieProps, MovieProps, MovieProps];
 }
 

@@ -6,7 +6,8 @@ import { Link, graphql } from 'gatsby';
 import Layout from '../components/layout';
 import Image from '../components/image';
 import SEO from '../components/seo';
-
+import { MovieProps } from '../components/movies';
+import { MovieTrioProp } from '../components/movies';
 
 export const query = graphql`
     query AllMovies {
