@@ -96,7 +96,7 @@ const MovieTriosPage: FunctionComponent<MovieData> = ({
     data,
 }: MovieData): ReactElement => {
     const movies: MovieProps[] = movieList({ data });
-    const targetNumberOfTrios = movies.length / 3;
+    const targetNumberOfTrios = Math.floor(movies.length / 3);
     const trios: MovieTrioProp[] = moviesAsTrios(
         targetNumberOfTrios,
         movies,
