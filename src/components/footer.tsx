@@ -79,7 +79,7 @@ const PageNav: FunctionComponent<PageNavProp> = ({
     const totalPages: number = pageContext.numPages;
 
     return (
-        <nav>
+        <nav aria-label="page navigation">
             <ol>
                 <PageLink currentPage={currentPage} pageLink={1} />
 
