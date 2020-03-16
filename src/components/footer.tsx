@@ -26,6 +26,14 @@ const PageLink: FunctionComponent<PageLinkProps> = ({
     );
 };
 
+interface PageChangeLinkProps {
+    currentPage: number;
+    // hide the link when this is the current page
+    hideOnPage: number;
+    // should the link lead to the next or to the previous page
+    nextOrPreviousPage: 'nextPageLink' | 'previousPageLink';
+}
+
 export interface PageNavProp {
     pageContext: {
         first: number;
