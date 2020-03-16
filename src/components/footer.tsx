@@ -34,6 +34,35 @@ interface PageChangeLinkProps {
     nextOrPreviousPage: 'nextPageLink' | 'previousPageLink';
 }
 
+const PageChangeLink: FunctionComponent<PageChangeLinkProps> = ({
+    currentPage,
+    hideOnPage,
+    nextOrPreviousPage,
+}: PageChangeLinkProps) => {
+    if (currentPage === hideOnPage) {
+        return null;
+    }
+
+    switch (nextOrPreviousPage) {
+        case 'previousPageLink':
+            return (
+                <li className="inline m-1 p-1">
+                    <Link className="p-1" to={`/page/${currentPage - 1}`}>
+                        ❮
+                    </Link>
+                </li>
+            );
+        default:
+            return (
+                <li className="inline m-1 p-1">
+                    <Link className="p-1" to={`/page/${currentPage + 1}`}>
+                        ❯
+                    </Link>
+                </li>
+            );
+    }
+};
+
 export interface PageNavProp {
     pageContext: {
         first: number;
