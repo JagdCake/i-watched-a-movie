@@ -44,11 +44,7 @@ const PageNav: FunctionComponent<PageNavProp> = ({
     return (
         <nav>
             <ol>
-                <li className="inline m-1 p-1 bg-black text-red-500 rounded-sm">
-                    <Link className="p-1" to="/page/1`">
-                        1
-                    </Link>
-                </li>
+                <PageLink currentPage={currentPage} pageLink={1} />
 
                 <li className="inline m-1 p-1">
                     <Link className="p-1" to={`/page/${currentPage - 1}`}>
@@ -64,11 +60,7 @@ const PageNav: FunctionComponent<PageNavProp> = ({
                     </Link>
                 </li>
 
-                <li className="inline m-1 p-1 bg-black text-red-500 rounded-sm">
-                    <Link className="p-1" to={`/page/${totalPages}`}>
-                        {totalPages}
-                    </Link>
-                </li>
+                <PageLink currentPage={currentPage} pageLink={totalPages} />
             </ol>
         </nav>
     );
