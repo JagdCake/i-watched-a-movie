@@ -9,6 +9,23 @@ interface PageLinkProps {
     pageLink: number;
 }
 
+const PageLink: FunctionComponent<PageLinkProps> = ({
+    currentPage,
+    pageLink,
+}: PageLinkProps) => {
+    if (currentPage === pageLink) {
+        return null;
+    }
+
+    return (
+        <li className="inline m-1 p-1 bg-black text-red-500 rounded-sm">
+            <Link className="p-1" to={`/page/${pageLink}`}>
+                {pageLink}
+            </Link>
+        </li>
+    );
+};
+
 export interface PageNavProp {
     pageContext: {
         first: number;
