@@ -83,19 +83,19 @@ const PageNav: FunctionComponent<PageNavProp> = ({
             <ol>
                 <PageLink currentPage={currentPage} pageLink={1} />
 
-                <li className="inline m-1 p-1">
-                    <Link className="p-1" to={`/page/${currentPage - 1}`}>
-                        ❮
-                    </Link>
-                </li>
+                <PageChangeLink
+                    currentPage={currentPage}
+                    hideOnPage={1}
+                    nextOrPreviousPage="previousPageLink"
+                />
 
                 <li className="inline m-1 p-1">{currentPage}</li>
 
-                <li className="inline m-1 p-1">
-                    <Link className="p-1" to={`/page/${currentPage + 1}`}>
-                        ❯
-                    </Link>
-                </li>
+                <PageChangeLink
+                    currentPage={currentPage}
+                    hideOnPage={totalPages}
+                    nextOrPreviousPage="nextPageLink"
+                />
 
                 <PageLink currentPage={currentPage} pageLink={totalPages} />
             </ol>
