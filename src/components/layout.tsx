@@ -13,13 +13,16 @@ import { ReactNode } from 'react';
 
 import Header from './header';
 import './main.css';
+import { PageNavProp } from './footer';
+import Footer from './footer';
 
-interface LayoutProps {
+interface LayoutProps extends PageNavProp {
     children: ReactNode;
 }
 
 const Layout: FunctionComponent<LayoutProps> = ({
     children,
+    pageContext,
 }: LayoutProps): ReactElement => {
     const data = useStaticQuery(graphql`
         query SiteTitleQuery {
@@ -38,6 +41,7 @@ const Layout: FunctionComponent<LayoutProps> = ({
                 <div className="separator w-full mt-6 h-px"></div>
                 {children}
             </main>
+            <Footer pageContext={pageContext} />
         </div>
     );
 };

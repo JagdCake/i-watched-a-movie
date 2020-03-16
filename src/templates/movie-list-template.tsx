@@ -8,7 +8,6 @@ import SEO from '../components/seo';
 import MovieTrio from '../components/movies';
 import { MovieProps } from '../components/movies';
 import { MovieTrioProp } from '../components/movies';
-import Footer from '../components/footer';
 import { PageNavProp } from '../components/footer';
 
 export const query = graphql`
@@ -111,10 +110,9 @@ const MovieTriosPage: FunctionComponent<MovieData> = ({
     });
 
     return (
-        <Layout>
+        <Layout pageContext={pageContext}>
             <SEO title="Home" />
             {movieTrios}
-            <Footer pageContext={pageContext} />
         </Layout>
     );
 };
