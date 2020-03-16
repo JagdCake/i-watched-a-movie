@@ -8,6 +8,8 @@ import SEO from '../components/seo';
 import MovieTrio from '../components/movies';
 import { MovieProps } from '../components/movies';
 import { MovieTrioProp } from '../components/movies';
+import Footer from '../components/footer';
+import { PageNavProp } from '../components/footer';
 
 export const query = graphql`
     query AllMovies($first: Int!, $offset: Int!) {
@@ -27,7 +29,7 @@ export const query = graphql`
     }
 `;
 
-interface MovieData {
+interface MovieData extends PageNavProp {
     data: {
         postgres: {
             allMoviesList: [
@@ -94,6 +96,7 @@ const moviesAsTrios: RecursiveFunction = (
 
 const MovieTriosPage: FunctionComponent<MovieData> = ({
     data,
+    pageContext,
 }: MovieData): ReactElement => {
     const movies: MovieProps[] = movieList({ data });
     const targetNumberOfTrios = Math.floor(movies.length / 3);
@@ -111,6 +114,7 @@ const MovieTriosPage: FunctionComponent<MovieData> = ({
         <Layout>
             <SEO title="Home" />
             {movieTrios}
+            <Footer pageContext={pageContext} />
         </Layout>
     );
 };
