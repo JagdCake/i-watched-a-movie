@@ -50,3 +50,15 @@ const PageNav: FunctionComponent<PageNavProp> = ({
         </nav>
     );
 };
+
+const Footer: FunctionComponent<PageNavProp> = ({
+    pageContext,
+}: PageNavProp): ReactElement => {
+    return (
+        <footer className="w-full bg-red-500 text-center text-2xl mt-6 p-4">
+            <PageNav pageContext={pageContext} />
+        </footer>
+    );
+};
+
+export default Footer;
