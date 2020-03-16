@@ -3,6 +3,12 @@ import { FunctionComponent } from 'react';
 import { ReactElement } from 'react';
 import { Link } from 'gatsby';
 
+interface PageLinkProps {
+    currentPage: number;
+    // link leads to this page number
+    pageLink: number;
+}
+
 export interface PageNavProp {
     pageContext: {
         first: number;
