@@ -7,3 +7,8 @@ export interface MovieSearchData {
     title: string;
     yearOfRelease: number;
 }
+
+interface MovieLinkListProps {
+    displayStatus: boolean;
+    movieData: MovieSearchData[];
+}
