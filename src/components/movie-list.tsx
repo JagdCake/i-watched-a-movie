@@ -1,6 +1,7 @@
 import React from 'react';
 import { FunctionComponent } from 'react';
 import { ReactElement } from 'react';
+import { PageNavProp } from './footer';
 
 export interface MovieSearchData {
     id: number;
@@ -29,7 +30,7 @@ const moviePage: Function = (
     return moviePage(movieId, numberOfMovies, moviesPerPage, page + 1);
 };
 
-interface MovieLinkListProps {
+interface MovieLinkListProps extends PageNavProp {
     displayStatus: boolean;
     movieData: MovieSearchData[];
 }
