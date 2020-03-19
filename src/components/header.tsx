@@ -4,6 +4,7 @@ import { FunctionComponent } from 'react';
 import { ReactElement } from 'react';
 import aboutIcon from '../images/about.svg';
 import searchIcon from '../images/search.svg';
+import MovieLinkList from './movie-list';
 import { MovieSearchData } from './movie-list';
 import { PageNavProp } from './footer';
 
@@ -52,13 +53,20 @@ const SearchBox: FunctionComponent<SearchBoxProps> = ({
     searchData,
     pageContext,
 }: SearchBoxProps): ReactElement => (
-    <input
-        className="w-48 h-8 rounded-sm border-2 p-2 bg-red-500 text-center border-black"
-        type="search"
-        value={value}
-        disabled={disabledStatus}
-        list={datalistId}
-    ></input>
+    <div>
+        <input
+            className="w-48 h-8 rounded-sm border-2 p-2 bg-red-500 text-center border-black"
+            type="search"
+            value={value}
+            disabled={disabledStatus}
+        ></input>
+
+        <MovieLinkList
+            displayStatus={!disabledStatus}
+            movieData={searchData}
+            pageContext={pageContext}
+        />
+    </div>
 );
 
 interface GeneralInfoProps {
