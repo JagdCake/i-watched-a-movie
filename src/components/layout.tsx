@@ -25,10 +25,17 @@ const Layout: FunctionComponent<LayoutProps> = ({
     pageContext,
 }: LayoutProps): ReactElement => {
     const data = useStaticQuery(graphql`
-        query SiteTitleQuery {
+        {
             site {
                 siteMetadata {
                     title
+                }
+            }
+            movieSearch: postgres {
+                allMoviesList(orderBy: ID_DESC) {
+                    id
+                    title
+                    yearOfRelease
                 }
             }
         }
