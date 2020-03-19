@@ -8,6 +8,27 @@ export interface MovieSearchData {
     yearOfRelease: number;
 }
 
+const moviePage: Function = (
+    movieId: number,
+    numberOfMovies: number,
+    moviesPerPage: number,
+    page: number,
+    lastPage: number
+) => {
+    const startRangeOfIdsForPage = numberOfMovies - moviesPerPage * page;
+    const endRangeOfIdsForPage = startRangeOfIdsForPage + moviesPerPage;
+
+    if (page === lastPage) {
+        return page;
+    }
+
+    if (movieId > startRangeOfIdsForPage && movieId <= endRangeOfIdsForPage) {
+        return page;
+    }
+
+    return moviePage(movieId, numberOfMovies, moviesPerPage, page + 1);
+};
+
 interface MovieLinkListProps {
     displayStatus: boolean;
     movieData: MovieSearchData[];
