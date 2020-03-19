@@ -43,7 +43,11 @@ const Layout: FunctionComponent<LayoutProps> = ({
 
     return (
         <div className="text-black bg-black">
-            <Header siteTitle={data.site.siteMetadata.title} />
+            <Header
+                siteTitle={data.site.siteMetadata.title}
+                searchData={data.movieSearch.allMoviesList}
+                pageContext={pageContext}
+            />
             <main className="w-full flex flex-wrap justify-center">
                 <div className="separator w-full mt-6 h-px"></div>
                 {children}
