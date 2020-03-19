@@ -5,6 +5,7 @@ import { ReactElement } from 'react';
 import aboutIcon from '../images/about.svg';
 import searchIcon from '../images/search.svg';
 import { MovieSearchData } from './movie-list';
+import { PageNavProp } from './footer';
 
 interface TitleHeadingProp {
     title: string;
@@ -39,7 +40,7 @@ const Button: FunctionComponent<ButtonProps> = ({
     </button>
 );
 
-interface SearchBoxProps {
+interface SearchBoxProps extends PageNavProp {
     value?: string;
     disabledStatus?: boolean;
     searchData: MovieSearchData[];
@@ -49,6 +50,7 @@ const SearchBox: FunctionComponent<SearchBoxProps> = ({
     value,
     disabledStatus = false,
     searchData,
+    pageContext,
 }: SearchBoxProps): ReactElement => (
     <input
         className="w-48 h-8 rounded-sm border-2 p-2 bg-red-500 text-center border-black"
