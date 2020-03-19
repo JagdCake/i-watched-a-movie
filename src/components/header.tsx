@@ -4,6 +4,7 @@ import { FunctionComponent } from 'react';
 import { ReactElement } from 'react';
 import aboutIcon from '../images/about.svg';
 import searchIcon from '../images/search.svg';
+import { MovieSearchData } from './movie-list';
 
 interface TitleHeadingProp {
     title: string;
@@ -41,14 +42,13 @@ const Button: FunctionComponent<ButtonProps> = ({
 interface SearchBoxProps {
     value?: string;
     disabledStatus?: boolean;
-    // the "id" of a datalist element
-    datalistId?: string;
+    searchData: MovieSearchData[];
 }
 
 const SearchBox: FunctionComponent<SearchBoxProps> = ({
     value,
     disabledStatus = false,
-    datalistId,
+    searchData,
 }: SearchBoxProps): ReactElement => (
     <input
         className="w-48 h-8 rounded-sm border-2 p-2 bg-red-500 text-center border-black"
