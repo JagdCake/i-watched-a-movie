@@ -1,6 +1,7 @@
 import React from 'react';
 import { FunctionComponent } from 'react';
 import { ReactElement } from 'react';
+import { Link } from 'gatsby';
 import { PageNavProp } from './footer';
 
 export interface MovieSearchData {
@@ -34,3 +35,47 @@ interface MovieLinkListProps extends PageNavProp {
     displayStatus: boolean;
     movieData: MovieSearchData[];
 }
+
+const MovieLinkList: FunctionComponent<MovieLinkListProps> = ({
+    displayStatus,
+    pageContext,
+    movieData,
+}: MovieLinkListProps): ReactElement | null => {
+    if (displayStatus === false) {
+        return null;
+    }
+
+    const numberOfMovies = movieData.length;
+    const moviesPerPage = pageContext.first;
+    const firstPage = 1;
+    const lastPage = pageContext.numPages;
+    const links: ReactElement[] = movieData.map((movie) => {
+        const pageWhereTheMovieIs = moviePage(
+            movie.id,
+            numberOfMovies,
+            moviesPerPage,
+            firstPage,
+            lastPage
+        );
+
+        const linkToMovie = `page/${pageWhereTheMovieIs}#${movie.id}`;
+        return (
+            <li key={movie.id} className="my-1">
+                <Link to={linkToMovie}>
+                    {movie.title} | {movie.yearOfRelease}
+                </Link>
+            </li>
+        );
+    });
+
+    return (
+        <ul
+            aria-label="list of movie titles, each followed by release year"
+            className="absolute w-48 list-disc list-inside bg-red-500 p-2 border-2 border-t-0 border-black rounded-sm"
+        >
+            {links}
+        </ul>
+    );
+};
+
+export default MovieLinkList;
