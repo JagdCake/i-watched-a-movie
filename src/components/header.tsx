@@ -196,7 +196,12 @@ const Header: FunctionComponent<HeaderProps> = ({
                 title="Open the About section"
             ></Button>
 
-            <SearchBox value="the number of movies" disabledStatus={true} />
+            <SearchBox
+                value={`${searchData.length} movies`}
+                disabledStatus={true}
+                searchData={searchData}
+                pageContext={pageContext}
+            />
 
             <Button
                 src={searchIcon}
