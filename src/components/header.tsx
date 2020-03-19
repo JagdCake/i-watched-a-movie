@@ -176,12 +176,15 @@ const ContactInfo: FunctionComponent<ContactInfoProps> = ({
     );
 };
 
-interface HeaderProps {
+interface HeaderProps extends PageNavProp {
     siteTitle: string;
+    searchData: MovieSearchData[];
 }
 
 const Header: FunctionComponent<HeaderProps> = ({
     siteTitle,
+    searchData,
+    pageContext,
 }: HeaderProps): ReactElement => (
     <header className="py-4 px-2 border-b-2 border-black bg-red-500">
         <TitleHeading title={siteTitle} />
