@@ -2,6 +2,7 @@ import { Link } from 'gatsby';
 import React from 'react';
 import { FunctionComponent } from 'react';
 import { ReactElement } from 'react';
+import { SyntheticEvent } from 'react';
 import aboutIcon from '../images/about.svg';
 import searchIcon from '../images/search.svg';
 import MovieLinkList from './movie-list';
@@ -29,14 +30,17 @@ interface ButtonProps {
     src: string;
     alt: string;
     title: string;
+    // function to toggle something when the button is clicked
+    toggleFunction: (event: SyntheticEvent) => void;
 }
 
 const Button: FunctionComponent<ButtonProps> = ({
     src,
     alt,
     title,
+    toggleFunction,
 }: ButtonProps): ReactElement => (
-    <button>
+    <button onClick={toggleFunction}>
         <img className="w-12" src={src} alt={alt} title={title}></img>
     </button>
 );
