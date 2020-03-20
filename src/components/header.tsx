@@ -200,11 +200,26 @@ const Header: FunctionComponent<HeaderProps> = ({
             <TitleHeading title={siteTitle} />
 
             <nav className="flex justify-between items-center">
-                <Button
-                    src={aboutIcon}
-                    alt="Question mark icon"
-                    title="Open the About section"
-                ></Button>
+                {!aboutSectionVisiblity && (
+                    <Button
+                        src={aboutIcon}
+                        alt="Question mark icon"
+                        title="Open the About section"
+                        toggleFunction={() => {
+                            setAboutSectionVisibility(!aboutSectionVisiblity);
+                        }}
+                    ></Button>
+                )}
+                {aboutSectionVisiblity && (
+                    <Button
+                        src={closeIcon}
+                        alt="X icon"
+                        title="Close the About section"
+                        toggleFunction={() => {
+                            setAboutSectionVisibility(!aboutSectionVisiblity);
+                        }}
+                    ></Button>
+                )}
 
                 <SearchBox
                     value={`${searchData.length} movies`}
