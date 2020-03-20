@@ -189,82 +189,88 @@ const Header: FunctionComponent<HeaderProps> = ({
     siteTitle,
     searchData,
     pageContext,
-}: HeaderProps): ReactElement => (
-    <header className="py-4 px-2 border-b-2 border-black bg-red-500">
-        <TitleHeading title={siteTitle} />
+}: HeaderProps): ReactElement => {
+    const [aboutSectionVisiblity, setAboutSectionVisibility] = React.useState(
+        false
+    );
 
-        <nav className="flex justify-between items-center">
-            <Button
-                src={aboutIcon}
-                alt="Question mark icon"
-                title="Open the About section"
-            ></Button>
+    return (
+        <header className="py-4 px-2 border-b-2 border-black bg-red-500">
+            <TitleHeading title={siteTitle} />
 
-            <SearchBox
-                value={`${searchData.length} movies`}
-                disabledStatus={true}
-                searchData={searchData}
-                pageContext={pageContext}
-            />
+            <nav className="flex justify-between items-center">
+                <Button
+                    src={aboutIcon}
+                    alt="Question mark icon"
+                    title="Open the About section"
+                ></Button>
 
-            <Button
-                src={searchIcon}
-                alt="Magnifying glass icon"
-                title="Enable search box"
-            ></Button>
-        </nav>
-
-        <article aria-label="About section">
-            <section
-                aria-label="General information"
-                className="py-3 pl-4 border-b border-black"
-            >
-                <GeneralInfo
-                    siteDescription="This is my personal movie catalogue. The idea is to catalogue
-                    every movie I (re)watch by creating entries which include 5 elements:"
-                    movieEntryItems={[
-                        'Info card',
-                        'My rating',
-                        '"Watched on" date',
-                        'Movie discussion or reviews',
-                        'IMDb link',
-                    ]}
+                <SearchBox
+                    value={`${searchData.length} movies`}
+                    disabledStatus={true}
+                    searchData={searchData}
+                    pageContext={pageContext}
                 />
-            </section>
 
-            <section
-                aria-label="Rating system"
-                className="py-3 pl-4 border-b border-black"
-            >
-                <RatingSystem
-                    ratings={[
-                        ['Bad Eggplant', [1, 3.9]],
-                        ['Decent Carrot', [4, 4.9]],
-                        ['Good Tomato', [5, 5.9]],
-                        ['Great Onion', [6, 7.8]],
-                        ['Amazing Savory', [7.9, 8.9]],
-                        ['Sublime Lettuce', [9, 10]],
-                    ]}
-                />
-            </section>
+                <Button
+                    src={searchIcon}
+                    alt="Magnifying glass icon"
+                    title="Enable search box"
+                ></Button>
+            </nav>
 
-            <footer aria-label="Contact information" className="py-3 pl-4">
-                <ContactInfo
-                    email="jc@jagdcake.com"
-                    contactLinks={[
-                        [
-                            'https://github.com/JagdCake/site.movies',
-                            'GitHub repository',
-                        ],
-                        [
-                            'https://data.jagdcake.com/',
-                            'Data on watched movies',
-                        ],
-                    ]}
-                />
-            </footer>
-        </article>
-    </header>
-);
+            <article aria-label="About section">
+                <section
+                    aria-label="General information"
+                    className="py-3 pl-4 border-b border-black"
+                >
+                    <GeneralInfo
+                        siteDescription="This is my personal movie catalogue. The idea is to catalogue
+                        every movie I (re)watch by creating entries which include 5 elements:"
+                        movieEntryItems={[
+                            'Info card',
+                            'My rating',
+                            '"Watched on" date',
+                            'Movie discussion or reviews',
+                            'IMDb link',
+                        ]}
+                    />
+                </section>
+
+                <section
+                    aria-label="Rating system"
+                    className="py-3 pl-4 border-b border-black"
+                >
+                    <RatingSystem
+                        ratings={[
+                            ['Bad Eggplant', [1, 3.9]],
+                            ['Decent Carrot', [4, 4.9]],
+                            ['Good Tomato', [5, 5.9]],
+                            ['Great Onion', [6, 7.8]],
+                            ['Amazing Savory', [7.9, 8.9]],
+                            ['Sublime Lettuce', [9, 10]],
+                        ]}
+                    />
+                </section>
+
+                <footer aria-label="Contact information" className="py-3 pl-4">
+                    <ContactInfo
+                        email="jc@jagdcake.com"
+                        contactLinks={[
+                            [
+                                'https://github.com/JagdCake/site.movies',
+                                'GitHub repository',
+                            ],
+                            [
+                                'https://data.jagdcake.com/',
+                                'Data on watched movies',
+                            ],
+                        ]}
+                    />
+                </footer>
+            </article>
+        </header>
+    );
+};
 
 export default Header;
