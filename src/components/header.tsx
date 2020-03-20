@@ -4,6 +4,7 @@ import { FunctionComponent } from 'react';
 import { ReactElement } from 'react';
 import { SyntheticEvent } from 'react';
 import aboutIcon from '../images/about.svg';
+import closeIcon from '../images/close.svg';
 import searchIcon from '../images/search.svg';
 import MovieLinkList from './movie-list';
 import { MovieSearchData } from './movie-list';
