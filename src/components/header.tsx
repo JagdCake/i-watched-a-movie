@@ -225,12 +225,20 @@ const Header: FunctionComponent<HeaderProps> = ({
                     ></Button>
                 )}
 
-                <SearchBox
-                    value={`${searchData.length} movies`}
-                    disabledStatus={true}
-                    searchData={searchData}
-                    pageContext={pageContext}
-                />
+                {searchBoxDisabledStatus && (
+                    <SearchBox
+                        value={`${searchData.length} movies`}
+                        disabledStatus={searchBoxDisabledStatus}
+                        searchData={[]}
+                        pageContext={{}}
+                    />
+                )}
+                {searchBoxDisabledStatus === false && (
+                    <SearchBox
+                        searchData={searchData}
+                        pageContext={pageContext}
+                    />
+                )}
 
                 {searchBoxDisabledStatus && (
                     <Button
