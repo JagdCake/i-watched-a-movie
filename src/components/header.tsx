@@ -64,6 +64,7 @@ const SearchBox: FunctionComponent<SearchBoxProps> = ({
             type="search"
             value={value}
             disabled={disabledStatus}
+            autoFocus={disabledStatus === false}
         ></input>
 
         <MovieLinkList
