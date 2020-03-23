@@ -232,11 +232,30 @@ const Header: FunctionComponent<HeaderProps> = ({
                     pageContext={pageContext}
                 />
 
-                <Button
-                    src={searchIcon}
-                    alt="Magnifying glass icon"
-                    title="Enable search box"
-                ></Button>
+                {searchBoxDisabledStatus && (
+                    <Button
+                        src={searchIcon}
+                        alt="Magnifying glass icon"
+                        title="Enable search box"
+                        toggleFunction={() => {
+                            setSearchBoxDisabledStatus(
+                                !searchBoxDisabledStatus
+                            );
+                        }}
+                    ></Button>
+                )}
+                {!searchBoxDisabledStatus && (
+                    <Button
+                        src={closeIcon}
+                        alt="X icon"
+                        title="Disable search box"
+                        toggleFunction={() => {
+                            setSearchBoxDisabledStatus(
+                                !searchBoxDisabledStatus
+                            );
+                        }}
+                    ></Button>
+                )}
             </nav>
 
             {aboutSectionVisiblity && (
