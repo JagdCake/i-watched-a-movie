@@ -194,6 +194,10 @@ const Header: FunctionComponent<HeaderProps> = ({
     const [aboutSectionVisiblity, setAboutSectionVisibility] = React.useState(
         false
     );
+    const [
+        searchBoxDisabledStatus,
+        setSearchBoxDisabledStatus,
+    ] = React.useState(true);
 
     return (
         <header className="py-4 px-2 border-b-2 border-black bg-red-500">
