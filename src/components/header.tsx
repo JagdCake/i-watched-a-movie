@@ -67,7 +67,7 @@ const SearchBox: FunctionComponent<SearchBoxProps> = ({
         ></input>
 
         <MovieLinkList
-            displayStatus={!disabledStatus}
+            displayStatus={disabledStatus === false}
             movieData={searchData}
             pageContext={pageContext}
         />
@@ -204,28 +204,28 @@ const Header: FunctionComponent<HeaderProps> = ({
             <TitleHeading title={siteTitle} />
 
             <nav className="flex justify-between items-center">
-                {!aboutSectionVisiblity && (
+                {aboutSectionVisiblity === false && (
                     <Button
                         src={aboutIcon}
                         alt="Question mark icon"
                         title="Open the About section"
                         toggleFunction={() => {
-                            setAboutSectionVisibility(!aboutSectionVisiblity);
+                            setAboutSectionVisibility(true);
                         }}
                     ></Button>
                 )}
-                {aboutSectionVisiblity && (
+                {aboutSectionVisiblity === true && (
                     <Button
                         src={closeIcon}
                         alt="X icon"
                         title="Close the About section"
                         toggleFunction={() => {
-                            setAboutSectionVisibility(!aboutSectionVisiblity);
+                            setAboutSectionVisibility(false);
                         }}
                     ></Button>
                 )}
 
-                {searchBoxDisabledStatus && (
+                {searchBoxDisabledStatus === true && (
                     <SearchBox
                         value={`${searchData.length} movies`}
                         disabledStatus={searchBoxDisabledStatus}
@@ -240,33 +240,29 @@ const Header: FunctionComponent<HeaderProps> = ({
                     />
                 )}
 
-                {searchBoxDisabledStatus && (
+                {searchBoxDisabledStatus === true && (
                     <Button
                         src={searchIcon}
                         alt="Magnifying glass icon"
                         title="Enable search box"
                         toggleFunction={() => {
-                            setSearchBoxDisabledStatus(
-                                !searchBoxDisabledStatus
-                            );
+                            setSearchBoxDisabledStatus(false);
                         }}
                     ></Button>
                 )}
-                {!searchBoxDisabledStatus && (
+                {searchBoxDisabledStatus === false && (
                     <Button
                         src={closeIcon}
                         alt="X icon"
                         title="Disable search box"
                         toggleFunction={() => {
-                            setSearchBoxDisabledStatus(
-                                !searchBoxDisabledStatus
-                            );
+                            setSearchBoxDisabledStatus(true);
                         }}
                     ></Button>
                 )}
             </nav>
 
-            {aboutSectionVisiblity && (
+            {aboutSectionVisiblity === true && (
                 <article aria-label="About section">
                     <section
                         aria-label="General information"
