@@ -1,3 +1,5 @@
+import { MovieLinkListProps } from './movie-list';
+
 const normalizedValue: Function = (value: string): string => {
     const specialCharacters = /[|`|~|!|@|#|$|%|^|&|*|(|)|_|||+|\|\-|=|?|;|:|'|"|,|.|<|>|\{|\}|\[|\]|\\|\/]/g;
     const twoOrMoreSpaces = /\s{2,}/g;
@@ -20,3 +22,7 @@ const matchSearch: Function = (
 
     return searchMatches;
 };
+
+interface MovieLinkSearchProps extends MovieLinkListProps {
+    searchValue: string;
+}
