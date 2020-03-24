@@ -73,7 +73,11 @@ const MovieLinkList: FunctionComponent<MovieLinkListProps> = ({
             aria-label="list of movie titles, each followed by release year"
             className="absolute w-48 list-disc list-inside bg-red-500 p-2 border-2 border-t-0 border-black rounded-sm"
         >
-            {links}
+            {(links.length > 0 && links) || (
+                <strong className="block my-1 text-center">
+                    Nothing here.
+                </strong>
+            )}
         </ul>
     );
 };
