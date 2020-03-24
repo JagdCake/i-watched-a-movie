@@ -45,7 +45,7 @@ const MovieLinkList: FunctionComponent<MovieLinkListProps> = ({
         return null;
     }
 
-    const numberOfMovies = movieData.length;
+    const numberOfMovies = pageContext.numberOfMovies;
     const moviesPerPage = pageContext.first;
     const firstPage = 1;
     const lastPage = pageContext.numPages;

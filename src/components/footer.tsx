@@ -69,6 +69,7 @@ export interface PageNavProp {
         offset: number;
         numPages: number;
         currentPage: number;
+        numberOfMovies: number;
     };
 }
 

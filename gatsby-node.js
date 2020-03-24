@@ -50,6 +50,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
                 offset: i * moviesPerPage,
                 numPages,
                 currentPage: i + 1,
+                numberOfMovies: numberOfMovies,
             },
         });
     });
