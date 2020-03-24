@@ -31,7 +31,7 @@ const moviePage: Function = (
     return moviePage(movieId, numberOfMovies, moviesPerPage, page + 1);
 };
 
-interface MovieLinkListProps extends PageNavProp {
+export interface MovieLinkListProps extends PageNavProp {
     displayStatus: boolean;
     movieData: MovieSearchData[];
 }
