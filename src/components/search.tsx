@@ -10,3 +10,13 @@ const normalizedValue: Function = (value: string): string => {
         .replace(specialCharacters, nothing) // removing special characters can leave more than two spaces
         .replace(twoOrMoreSpaces, oneSpace);
 };
+
+const matchSearch: Function = (
+    searchValue: string,
+    searchData: string
+): boolean => {
+    const regex = new RegExp(`.*${searchValue}.*`, 'g');
+    const searchMatches: boolean = regex.test(searchData);
+
+    return searchMatches;
+};
