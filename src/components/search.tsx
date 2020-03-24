@@ -1,4 +1,8 @@
-import { MovieLinkListProps } from './movie-list';
+import React from 'react';
+import { FunctionComponent } from 'react';
+import { ReactElement } from 'react';
+import { MovieLinkListProps, MovieSearchData } from './movie-list';
+import MovieLinkList from './movie-list';
 
 const normalizedValue: Function = (value: string): string => {
     const specialCharacters = /[|`|~|!|@|#|$|%|^|&|*|(|)|_|||+|\|\-|=|?|;|:|'|"|,|.|<|>|\{|\}|\[|\]|\\|\/]/g;
@@ -26,3 +30,35 @@ const matchSearch: Function = (
 interface MovieLinkSearchProps extends MovieLinkListProps {
     searchValue: string;
 }
+
+const MovieLinkSearch: FunctionComponent<MovieLinkSearchProps> = ({
+    displayStatus,
+    pageContext,
+    movieData,
+    searchValue,
+}: MovieLinkSearchProps): ReactElement => {
+    const normalizedSearchValue = normalizedValue(searchValue);
+
+    const searchResults: MovieSearchData[] = movieData.filter((movie) => {
+        const normalizedMovieTitle = normalizedValue(movie.title);
+
+        const valueMatches: boolean = matchSearch(
+            normalizedSearchValue,
+            normalizedMovieTitle
+        );
+
+        if (valueMatches) {
+            return movie;
+        }
+    });
+
+    return (
+        <MovieLinkList
+            displayStatus={displayStatus}
+            pageContext={pageContext}
+            movieData={searchResults}
+        />
+    );
+};
+
+export default MovieLinkSearch;
