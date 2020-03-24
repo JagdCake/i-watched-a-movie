@@ -52,11 +52,13 @@ const MovieLinkSearch: FunctionComponent<MovieLinkSearchProps> = ({
         }
     });
 
+    const threeTriosOfSearchResults = searchResults.slice(0, 9);
+
     return (
         <MovieLinkList
             displayStatus={displayStatus}
             pageContext={pageContext}
-            movieData={searchResults}
+            movieData={threeTriosOfSearchResults}
         />
     );
 };
