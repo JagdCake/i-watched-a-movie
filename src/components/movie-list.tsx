@@ -60,7 +60,7 @@ const MovieLinkList: FunctionComponent<MovieLinkListProps> = ({
 
         const linkToMovie = `page/${pageWhereTheMovieIs}#${movie.id}`;
         return (
-            <li key={movie.id} className="my-1">
+            <li key={movie.id} className="my-2">
                 <Link to={linkToMovie}>
                     {movie.title} | {movie.yearOfRelease}
                 </Link>
@@ -74,7 +74,7 @@ const MovieLinkList: FunctionComponent<MovieLinkListProps> = ({
             className="absolute w-48 list-disc list-inside bg-red-500 p-2 border-2 border-t-0 border-black rounded-sm"
         >
             {(links.length > 0 && links) || (
-                <strong className="block my-1 text-center">
+                <strong className="block my-2 text-center">
                     Nothing here.
                 </strong>
             )}
