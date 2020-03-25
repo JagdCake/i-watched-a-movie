@@ -46,6 +46,15 @@ const Button: FunctionComponent<ButtonProps> = ({
     </button>
 );
 
+const filterSearchResults: Function = (
+    searchValue: string,
+    setSearchValue: Function
+): void => {
+    setTimeout(() => {
+        setSearchValue(searchValue);
+    }, 700);
+};
+
 interface SearchBoxProps extends PageNavProp {
     value?: string;
     disabledStatus?: boolean;
