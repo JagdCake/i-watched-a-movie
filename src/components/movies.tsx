@@ -94,7 +94,7 @@ const MiscMetadata: FunctionComponent<MiscMetadataProps> = ({
                 href={`https://www.imdb.com/title/${imdbId}`}
                 className="underline"
             >
-                IMDb link
+                IMDb page
             </a>
         </li>
     </ul>

@@ -298,7 +298,7 @@ const Header: FunctionComponent<HeaderProps> = ({
                                 'My rating',
                                 '"Watched on" date',
                                 'Movie discussion or reviews',
-                                'IMDb link',
+                                'Link to IMDb page',
                             ]}
                         />
                     </section>
