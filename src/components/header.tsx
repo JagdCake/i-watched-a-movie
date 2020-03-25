@@ -278,6 +278,7 @@ const Header: FunctionComponent<HeaderProps> = ({
                         title="Disable search box"
                         toggleFunction={() => {
                             setSearchBoxDisabledStatus(true);
+                            setSearchValue('');
                         }}
                     ></Button>
                 )}
