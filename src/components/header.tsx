@@ -6,7 +6,7 @@ import { SyntheticEvent } from 'react';
 import aboutIcon from '../images/about.svg';
 import closeIcon from '../images/close.svg';
 import searchIcon from '../images/search.svg';
-import MovieLinkList from './movie-list';
+import MovieLinkSearch from './search-movie-list';
 import { MovieSearchData } from './movie-list';
 import { PageNavProp } from './footer';
 
@@ -83,10 +83,11 @@ const SearchBox: FunctionComponent<SearchBoxProps> = ({
             }}
         ></input>
 
-        <MovieLinkList
+        <MovieLinkSearch
             displayStatus={disabledStatus === false}
             movieData={searchData}
             pageContext={pageContext}
+            searchValue={searchValue}
         />
     </div>
 );
