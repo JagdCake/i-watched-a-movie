@@ -216,6 +216,7 @@ const Header: FunctionComponent<HeaderProps> = ({
         searchBoxDisabledStatus,
         setSearchBoxDisabledStatus,
     ] = React.useState(true);
+    const [searchValue, setSearchValue] = React.useState('');
 
     return (
         <header className="py-4 px-2 border-b-2 border-black bg-red-500">
@@ -255,6 +256,8 @@ const Header: FunctionComponent<HeaderProps> = ({
                     <SearchBox
                         searchData={searchData}
                         pageContext={pageContext}
+                        searchValue={searchValue}
+                        setSearchValue={setSearchValue}
                     />
                 )}
 
