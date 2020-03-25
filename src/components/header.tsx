@@ -59,6 +59,8 @@ interface SearchBoxProps extends PageNavProp {
     value?: string;
     disabledStatus?: boolean;
     searchData: MovieSearchData[];
+    searchValue?: string;
+    setSearchValue?: (value: string) => void;
 }
 
 const SearchBox: FunctionComponent<SearchBoxProps> = ({
@@ -66,6 +68,8 @@ const SearchBox: FunctionComponent<SearchBoxProps> = ({
     disabledStatus = false,
     searchData,
     pageContext,
+    searchValue = '',
+    setSearchValue,
 }: SearchBoxProps): ReactElement => (
     <div>
         <input
