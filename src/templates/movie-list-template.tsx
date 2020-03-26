@@ -9,6 +9,7 @@ import MovieTrio from '../components/movies';
 import { MovieProps } from '../components/movies';
 import { MovieTrioProp } from '../components/movies';
 import { PageNavProp } from '../components/footer';
+import BackToTopLink from '../components/back-to-top-link';
 
 export const query = graphql`
     query AllMovies($first: Int!, $offset: Int!) {
@@ -106,6 +107,18 @@ const MovieTriosPage: FunctionComponent<MovieData> = ({
     );
 
     const movieTrios: ReactElement[] = trios.map((trio, index) => {
+        // insert a "back to top" link after each 9th movie
+        if (index !== 0 && index % 3 === 0) {
+            return (
+                <>
+                    <MovieTrio key={index} movies={trio.movies} />
+                    <BackToTopLink
+                        linkToTopOfWindow={`page/${pageContext.currentPage}`}
+                    />
+                </>
+            );
+        }
+
         return <MovieTrio key={index} movies={trio.movies} />;
     });
 
