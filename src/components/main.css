@@ -11,3 +11,7 @@
 .separator {
     background-image: linear-gradient(to right, transparent, #d05353, transparent);
 }
+
+.highlight {
+    box-shadow: 0 0 50px #D05353;
+}

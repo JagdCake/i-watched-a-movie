@@ -106,35 +106,43 @@ export interface MovieProps extends InfoCardProps, MiscMetadataProps {
 
 const Movie: FunctionComponent<MovieProps> = (
     props: MovieProps
-): ReactElement => (
-    <>
-        <div aria-label="Movie entry" id={props.id.toString()} className="m-6">
-            <section
-                aria-label="Movie info card"
-                className="border border-red-500 bg-white"
-            >
-                <InfoCard
-                    title={props.title}
-                    yearOfRelease={props.yearOfRelease}
-                    directors={props.directors}
-                    topActors={props.topActors}
-                />
-            </section>
+): ReactElement => {
+    const movieId = props.id.toString();
+    const anchorLink = window.location.hash;
+    const movieIsSelected = anchorLink === `#${movieId}`;
 
-            <section aria-label="Misc movie metadata" className="text-2xl">
-                <MiscMetadata
-                    myRating={props.myRating}
-                    watchedOn={props.watchedOn}
-                    discussion={props.discussion}
-                    imdbId={props.imdbId}
-                />
-            </section>
+    return (
+        <>
+            <div aria-label="Movie entry" id={movieId} className="m-6">
+                <section
+                    aria-label="Movie info card"
+                    className={`
+                        border border-red-500 bg-white
+                        ${movieIsSelected ? 'highlight' : ''}
+                    `}
+                >
+                    <InfoCard
+                        title={props.title}
+                        yearOfRelease={props.yearOfRelease}
+                        directors={props.directors}
+                        topActors={props.topActors}
+                    />
+                </section>
 
-            <div className="separator mt-6 h-px"></div>
-        </div>
-    </>
-);
+                <section aria-label="Misc movie metadata" className="text-2xl">
+                    <MiscMetadata
+                        myRating={props.myRating}
+                        watchedOn={props.watchedOn}
+                        discussion={props.discussion}
+                        imdbId={props.imdbId}
+                    />
+                </section>
 
+                <div className="separator mt-6 h-px"></div>
+            </div>
+        </>
+    );
+};
 export interface MovieTrioProp {
     movies: [MovieProps, MovieProps, MovieProps];
 }
