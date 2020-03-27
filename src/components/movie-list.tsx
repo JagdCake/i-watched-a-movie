@@ -34,12 +34,14 @@ const moviePage: Function = (
 export interface MovieLinkListProps extends PageNavProp {
     displayStatus: boolean;
     movieData: MovieSearchData[];
+    handleClick: () => void;
 }
 
 const MovieLinkList: FunctionComponent<MovieLinkListProps> = ({
     displayStatus,
     pageContext,
     movieData,
+    handleClick,
 }: MovieLinkListProps): ReactElement | null => {
     if (displayStatus === false) {
         return null;
@@ -60,7 +62,7 @@ const MovieLinkList: FunctionComponent<MovieLinkListProps> = ({
 
         const linkToMovie = `page/${pageWhereTheMovieIs}#${movie.id}`;
         return (
-            <li key={movie.id} className="my-2">
+            <li key={movie.id} className="my-2" onClick={() => handleClick()}>
                 <Link to={linkToMovie}>
                     {movie.title} | {movie.yearOfRelease}
                 </Link>

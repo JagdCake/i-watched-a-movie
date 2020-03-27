@@ -35,6 +35,7 @@ const MovieLinkSearch: FunctionComponent<MovieLinkSearchProps> = ({
     displayStatus,
     pageContext,
     movieData,
+    handleClick,
     searchValue,
 }: MovieLinkSearchProps): ReactElement => {
     const normalizedSearchValue = normalizedValue(searchValue);
@@ -59,6 +60,7 @@ const MovieLinkSearch: FunctionComponent<MovieLinkSearchProps> = ({
             displayStatus={displayStatus}
             pageContext={pageContext}
             movieData={threeTriosOfSearchResults}
+            handleClick={handleClick}
         />
     );
 };
