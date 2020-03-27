@@ -218,6 +218,11 @@ const Header: FunctionComponent<HeaderProps> = ({
     ] = React.useState(true);
     const [searchValue, setSearchValue] = React.useState('');
 
+    const disableSearchBox = (): void => {
+        setSearchBoxDisabledStatus(true);
+        setSearchValue('');
+    };
+
     return (
         <header className="py-4 px-2 border-b-2 border-black bg-red-500">
             <TitleHeading title={siteTitle} />
