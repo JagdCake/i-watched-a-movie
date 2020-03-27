@@ -223,6 +223,15 @@ const Header: FunctionComponent<HeaderProps> = ({
         setSearchValue('');
     };
 
+    if (searchBoxDisabledStatus === false) {
+        window.addEventListener('keyup', (event) => {
+            // disable the search box if the Escape key has been pressed
+            if (event.keyCode === 27) {
+                disableSearchBox();
+            }
+        });
+    }
+
     return (
         <header className="py-4 px-2 border-b-2 border-black bg-red-500">
             <TitleHeading title={siteTitle} />
