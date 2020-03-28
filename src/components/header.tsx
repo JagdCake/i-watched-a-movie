@@ -17,7 +17,7 @@ interface TitleHeadingProp {
 const TitleHeading: FunctionComponent<TitleHeadingProp> = ({
     title,
 }): ReactElement => (
-    <h1 className="text-center text-xl font-medium tracking-wide">
+    <h1 className="text-center text-xl font-medium tracking-wide font-slackey">
         <Link
             className="hover:font-black focus:font-black active:font-black"
             to="/"
@@ -77,7 +77,7 @@ const SearchBox: FunctionComponent<SearchBoxProps> = ({
 }: SearchBoxProps): ReactElement => (
     <div>
         <input
-            className="w-48 h-8 rounded-sm border-2 p-2 bg-red-500 text-center border-black"
+            className="w-48 h-8 rounded-sm border-2 p-2 bg-red-500 text-center border-black font-slackey"
             type="search"
             value={value}
             disabled={disabledStatus}
