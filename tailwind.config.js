@@ -4,6 +4,9 @@ module.exports = {
             colors: {
                 black: '#111',
             },
+            transitionProperty: {
+                'height-opacity': 'height, opacity',
+            },
         },
     },
     variants: {},
