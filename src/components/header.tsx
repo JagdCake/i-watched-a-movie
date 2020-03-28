@@ -77,7 +77,9 @@ const SearchBox: FunctionComponent<SearchBoxProps> = ({
 }: SearchBoxProps): ReactElement => (
     <div>
         <input
-            className="w-48 h-8 rounded-sm border-2 p-2 bg-red text-center border-black font-slackey"
+            className={`w-48 h-8 rounded-sm border-2 p-2 bg-red text-center border-black ${
+                disabledStatus === true ? 'font-slackey' : ''
+            }`}
             type="search"
             value={value}
             disabled={disabledStatus}
