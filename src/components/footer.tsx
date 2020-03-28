@@ -18,7 +18,7 @@ const PageLink: FunctionComponent<PageLinkProps> = ({
     }
 
     return (
-        <li className="inline m-1 p-1 bg-black text-red-500 rounded-sm">
+        <li className="inline m-1 p-1 bg-black text-red rounded-sm">
             <Link className="p-1" to={`/page/${pageLink}`}>
                 {pageLink}
             </Link>
@@ -108,7 +108,7 @@ const Footer: FunctionComponent<PageNavProp> = ({
     pageContext,
 }: PageNavProp): ReactElement => {
     return (
-        <footer className="w-full bg-red-500 text-center text-2xl mt-6 p-4">
+        <footer className="w-full bg-red text-center text-2xl mt-6 p-4">
             <PageNav pageContext={pageContext} />
         </footer>
     );

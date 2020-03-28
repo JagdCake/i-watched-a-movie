@@ -77,7 +77,7 @@ const SearchBox: FunctionComponent<SearchBoxProps> = ({
 }: SearchBoxProps): ReactElement => (
     <div>
         <input
-            className="w-48 h-8 rounded-sm border-2 p-2 bg-red-500 text-center border-black font-slackey"
+            className="w-48 h-8 rounded-sm border-2 p-2 bg-red text-center border-black font-slackey"
             type="search"
             value={value}
             disabled={disabledStatus}
@@ -238,7 +238,7 @@ const Header: FunctionComponent<HeaderProps> = ({
     }
 
     return (
-        <header className="py-4 px-2 border-b-2 border-black bg-red-500">
+        <header className="py-4 px-2 border-b-2 border-black bg-red">
             <TitleHeading title={siteTitle} />
 
             <nav className="flex justify-between items-center">
