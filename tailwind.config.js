@@ -7,6 +7,10 @@ module.exports = {
             transitionProperty: {
                 'height-opacity': 'height, opacity',
             },
+            fontFamily: {
+                slackey: ['Slackey', 'serif'],
+                oswald: ['Oswald', 'sans-serif'],
+            },
         },
     },
     variants: {},
