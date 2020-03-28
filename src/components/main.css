@@ -15,3 +15,11 @@
 .highlight {
     box-shadow: 0 0 50px #D05353;
 }
+
+a:focus {
+    outline: 3px dashed #fff;
+}
+
+button:focus {
+    outline: 3px dashed #fff;
+}
