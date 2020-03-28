@@ -304,58 +304,64 @@ const Header: FunctionComponent<HeaderProps> = ({
                 )}
             </nav>
 
-            {aboutSectionVisiblity === true && (
-                <article aria-label="About section">
-                    <section
-                        aria-label="General information"
-                        className="py-3 pl-4 border-b border-black"
-                    >
-                        <GeneralInfo
-                            siteDescription="This is my personal movie catalogue. The idea is to catalogue
-                            every movie I (re)watch by creating entries which include 5 elements:"
-                            movieEntryItems={[
-                                'Info card',
-                                'My rating',
-                                '"Watched on" date',
-                                'Movie discussion or reviews',
-                                'Link to IMDb page',
-                            ]}
-                        />
-                    </section>
+            <article
+                aria-label="About section"
+                className={`
+                    transition-height-opacity duration-300 ease-in ${
+                        aboutSectionVisiblity === false
+                            ? 'h-0 opacity-0'
+                            : 'h-full opacity-100'
+                    }`}
+            >
+                <section
+                    aria-label="General information"
+                    className="py-3 pl-4 border-b border-black"
+                >
+                    <GeneralInfo
+                        siteDescription="This is my personal movie catalogue. The idea is to catalogue
+                        every movie I (re)watch by creating entries which include 5 elements:"
+                        movieEntryItems={[
+                            'Info card',
+                            'My rating',
+                            '"Watched on" date',
+                            'Movie discussion or reviews',
+                            'Link to IMDb page',
+                        ]}
+                    />
+                </section>
 
-                    <section
-                        aria-label="Rating system"
-                        className="py-3 pl-4 border-b border-black"
-                    >
-                        <RatingSystem
-                            ratings={[
-                                ['Bad Eggplant', [1, 3.9]],
-                                ['Decent Carrot', [4, 4.9]],
-                                ['Good Tomato', [5, 5.9]],
-                                ['Great Onion', [6, 7.8]],
-                                ['Amazing Savory', [7.9, 8.9]],
-                                ['Sublime Lettuce', [9, 10]],
-                            ]}
-                        />
-                    </section>
+                <section
+                    aria-label="Rating system"
+                    className="py-3 pl-4 border-b border-black"
+                >
+                    <RatingSystem
+                        ratings={[
+                            ['Bad Eggplant', [1, 3.9]],
+                            ['Decent Carrot', [4, 4.9]],
+                            ['Good Tomato', [5, 5.9]],
+                            ['Great Onion', [6, 7.8]],
+                            ['Amazing Savory', [7.9, 8.9]],
+                            ['Sublime Lettuce', [9, 10]],
+                        ]}
+                    />
+                </section>
 
-                    <footer aria-label="Contact information" className="py-3 pl-4">
-                        <ContactInfo
-                            email="jc@jagdcake.com"
-                            contactLinks={[
-                                [
-                                    'https://github.com/JagdCake/site.movies',
-                                    'GitHub repository',
-                                ],
-                                [
-                                    'https://data.jagdcake.com/',
-                                    'Data on watched movies',
-                                ],
-                            ]}
-                        />
-                    </footer>
-                </article>
-            )}
+                <footer aria-label="Contact information" className="py-3 pl-4">
+                    <ContactInfo
+                        email="jc@jagdcake.com"
+                        contactLinks={[
+                            [
+                                'https://github.com/JagdCake/site.movies',
+                                'GitHub repository',
+                            ],
+                            [
+                                'https://data.jagdcake.com/',
+                                'Data on watched movies',
+                            ],
+                        ]}
+                    />
+                </footer>
+            </article>
         </header>
     );
 };
