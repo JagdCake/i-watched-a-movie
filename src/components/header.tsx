@@ -183,8 +183,11 @@ const ContactInfo: FunctionComponent<ContactInfoProps> = ({
         const linkName = link[1];
 
         return (
-            <li key={index}>
-                <a className="block underline mb-3" href={url}>
+            <li
+                key={index}
+                className="hover:text-white focus-within:text-white"
+            >
+                <a className="block underline mb-3 text-black" href={url}>
                     {linkName}
                 </a>
             </li>
