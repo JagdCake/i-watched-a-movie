@@ -62,8 +62,12 @@ const MovieLinkList: FunctionComponent<MovieLinkListProps> = ({
 
         const linkToMovie = `page/${pageWhereTheMovieIs}#${movie.id}`;
         return (
-            <li key={movie.id} className="my-2" onClick={() => handleClick()}>
-                <Link to={linkToMovie}>
+            <li
+                key={movie.id}
+                className="my-2 hover:text-white focus-within:text-white"
+                onClick={() => handleClick()}
+            >
+                <Link to={linkToMovie} className="text-black">
                     {movie.title} | {movie.yearOfRelease}
                 </Link>
             </li>
