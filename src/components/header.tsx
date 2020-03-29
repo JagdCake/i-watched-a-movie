@@ -187,7 +187,10 @@ const ContactInfo: FunctionComponent<ContactInfoProps> = ({
                 key={index}
                 className="hover:text-white focus-within:text-white"
             >
-                <a className="block underline mb-3 text-black" href={url}>
+                <a
+                    className="inline-block underline mb-3 text-black"
+                    href={url}
+                >
                     {linkName}
                 </a>
             </li>
