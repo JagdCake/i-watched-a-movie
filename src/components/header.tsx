@@ -41,7 +41,10 @@ const Button: FunctionComponent<ButtonProps> = ({
     title,
     toggleFunction,
 }: ButtonProps): ReactElement => (
-    <button onClick={toggleFunction}>
+    <button
+        onClick={toggleFunction}
+        className="transform hover:scale-110 focus:scale-110 active:scale-110"
+    >
         <img className="w-12" src={src} alt={alt} title={title}></img>
     </button>
 );
