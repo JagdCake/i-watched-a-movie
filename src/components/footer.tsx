@@ -19,7 +19,10 @@ const PageLink: FunctionComponent<PageLinkProps> = ({
 
     return (
         <li className="inline m-1 p-1 bg-black text-red rounded-sm">
-            <Link className="p-1" to={`/page/${pageLink}`}>
+            <Link
+                className="p-1 hover:text-white focus:text-white active:text-white"
+                to={`/page/${pageLink}`}
+            >
                 {pageLink}
             </Link>
         </li>
@@ -46,7 +49,7 @@ const PageChangeLink: FunctionComponent<PageChangeLinkProps> = ({
     switch (nextOrPreviousPage) {
         case 'previousPageLink':
             return (
-                <li className="inline m-1 p-1">
+                <li className="inline m-1 p-1 hover:text-white focus-within:text-white active:text-white">
                     <Link className="p-1" to={`/page/${currentPage - 1}`}>
                         ❮
                     </Link>
@@ -54,7 +57,7 @@ const PageChangeLink: FunctionComponent<PageChangeLinkProps> = ({
             );
         default:
             return (
-                <li className="inline m-1 p-1">
+                <li className="inline m-1 p-1 hover:text-white focus-within:text-white active:text-white">
                     <Link className="p-1" to={`/page/${currentPage + 1}`}>
                         ❯
                     </Link>
