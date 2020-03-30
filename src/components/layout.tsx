@@ -49,7 +49,7 @@ const Layout: FunctionComponent<LayoutProps> = ({
                 pageContext={pageContext}
             />
             <main className="w-full flex flex-wrap justify-center font-oswald">
-                <div className="separator w-full mt-6 h-px"></div>
+                <div className="separator w-full my-6 h-px"></div>
                 {children}
             </main>
             <Footer pageContext={pageContext} />

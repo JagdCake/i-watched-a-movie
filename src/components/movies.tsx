@@ -113,7 +113,7 @@ const Movie: FunctionComponent<MovieProps> = (
 
     return (
         <>
-            <div aria-label="Movie entry" id={movieId} className="m-6">
+            <div aria-label="Movie entry" id={movieId}>
                 <section
                     aria-label="Movie info card"
                     className={`
@@ -138,7 +138,7 @@ const Movie: FunctionComponent<MovieProps> = (
                     />
                 </section>
 
-                <div className="separator mt-6 h-px"></div>
+                <div className="separator my-6 h-px"></div>
             </div>
         </>
     );
@@ -169,7 +169,7 @@ const MovieTrio: FunctionComponent<MovieTrioProp> = ({
         <>
             <article aria-label="Movie trio" className="text-center">
                 {threeMovies}
-                <div className="separator mt-6 h-px"></div>
+                <div className="separator my-6 h-px"></div>
             </article>
         </>
     );
