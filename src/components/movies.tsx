@@ -74,7 +74,7 @@ const MiscMetadata: FunctionComponent<MiscMetadataProps> = ({
     discussion,
     imdbId,
 }: MiscMetadataProps): ReactElement => (
-    <ul className="inline-block bg-red border border-black rounded-sm w-3/4 mt-2">
+    <ul className="inline-block bg-red border border-black rounded-sm w-2/3 mt-2">
         <li aria-label="my rating" className="border-b border-black">
             {myRating}
         </li>
