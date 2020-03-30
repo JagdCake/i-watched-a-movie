@@ -113,7 +113,7 @@ const Movie: FunctionComponent<MovieProps> = (
 
     return (
         <>
-            <div aria-label="Movie entry" id={movieId}>
+            <div aria-label="Movie entry" id={movieId} className="w-5/6 m-auto">
                 <section
                     aria-label="Movie info card"
                     className={`
