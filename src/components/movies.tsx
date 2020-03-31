@@ -113,7 +113,11 @@ const Movie: FunctionComponent<MovieProps> = (
 
     return (
         <>
-            <div aria-label="Movie entry" id={movieId} className="w-5/6 m-auto">
+            <div
+                aria-label="Movie entry"
+                id={movieId}
+                className="w-5/6 m-auto lg:w-1/3"
+            >
                 <section
                     aria-label="Movie info card"
                     className={`
@@ -167,7 +171,10 @@ const MovieTrio: FunctionComponent<MovieTrioProp> = ({
 
     return (
         <>
-            <article aria-label="Movie trio" className="text-center">
+            <article
+                aria-label="Movie trio"
+                className="text-center lg:flex lg:flex-wrap lg:justify-between"
+            >
                 {threeMovies}
                 <div className="separator my-6 h-px"></div>
             </article>
