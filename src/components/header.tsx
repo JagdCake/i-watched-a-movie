@@ -321,7 +321,7 @@ const Header: FunctionComponent<HeaderProps> = ({
                     transition-height-opacity duration-300 ease-in bg-red ${
                         aboutSectionVisiblity === false
                             ? 'h-0 opacity-0'
-                            : 'h-full opacity-100'
+                            : 'h-full opacity-100 mt-3'
                     }`}
             >
                 <section
