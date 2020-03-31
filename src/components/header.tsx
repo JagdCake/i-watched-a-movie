@@ -249,7 +249,7 @@ const Header: FunctionComponent<HeaderProps> = ({
     }
 
     return (
-        <header className="py-4 px-2">
+        <header>
             <TitleHeading title={siteTitle} />
 
             <nav className="flex justify-between items-center">
