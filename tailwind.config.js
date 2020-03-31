@@ -1,5 +1,11 @@
 module.exports = {
     theme: {
+        screens: {
+            sm: '414px',
+            md: '576px',
+            lg: '768px',
+            xl: '1156px',
+        },
         extend: {
             colors: {
                 black: '#111',
