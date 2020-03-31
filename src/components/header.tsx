@@ -80,7 +80,7 @@ const SearchBox: FunctionComponent<SearchBoxProps> = ({
 }: SearchBoxProps): ReactElement => (
     <div>
         <input
-            className={`w-48 h-8 rounded-sm border-2 p-2 bg-red text-center border-black mt-3 ${
+            className={`w-48 rounded-sm border-2 p-2 bg-red text-center border-black mt-3 ${
                 disabledStatus === true ? 'font-slackey' : ''
             }`}
             type="search"
