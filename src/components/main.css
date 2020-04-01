@@ -20,6 +20,14 @@ a:focus {
     outline: 3px dashed #fff;
 }
 
+a[title="Back to top"]:focus {
+    outline: none;
+}
+
+a[title="Back to top"]:focus span {
+    outline: 3px dashed #fff;
+}
+
 button:focus {
     outline: 3px dashed #fff;
 }
