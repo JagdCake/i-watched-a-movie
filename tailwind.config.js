@@ -1,10 +1,14 @@
 module.exports = {
     theme: {
         screens: {
+            // small phones
             sm: '414px',
+            // big phones
             md: '576px',
+            // tablets
             lg: '768px',
-            xl: '1156px',
+            // large screens
+            xl: '1024px',
         },
         extend: {
             colors: {
