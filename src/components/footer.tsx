@@ -111,7 +111,7 @@ const Footer: FunctionComponent<PageNavProp> = ({
     pageContext,
 }: PageNavProp): ReactElement => {
     return (
-        <footer className="w-full bg-red text-center text-2xl p-4 sm:w-10/12 m-auto lg:w-2/5">
+        <footer className="w-full bg-red text-center text-2xl p-4 sm:w-10/12 m-auto sm:rounded-t-md lg:w-2/5">
             <PageNav pageContext={pageContext} />
         </footer>
     );
