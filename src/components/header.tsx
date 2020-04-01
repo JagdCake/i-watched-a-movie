@@ -249,7 +249,7 @@ const Header: FunctionComponent<HeaderProps> = ({
     }
 
     return (
-        <header className="sm:w-10/12 m-auto md:w-3/5 lg:w-2/5 xl:w-1/3 2xl:w-1/5 4xl:w-1/6">
+        <header className="sm:w-10/12 m-auto md:w-3/5 lg:w-2/5 xl:w-1/3 2xl:w-1/5 4xl:w-1/6 5xl:w-9p">
             <TitleHeading title={siteTitle} />
 
             <nav className="flex justify-around items-center sm:justify-between">
