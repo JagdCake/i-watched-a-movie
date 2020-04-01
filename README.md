@@ -1,34 +1,11 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
-<h2 align="center">
-  Gatsby's default starter, but with TypeScript and Tailwind CSS support
-</h2>
+## site.movies
+Personal movie catalogue built using Gatsby.
 
-This starter uses Gatsby's default starter as a base and adds support
-for [TypeScript](https://www.typescriptlang.org/) and [Tailwind
-CSS](https://tailwindcss.com/) on top.
-
--   there are 13 new dependencies
-    -   [typescript](https://www.npmjs.com/package/typescript)
-    -   [ts-node](https://www.npmjs.com/package/ts-node)
-    -   [gatsby-plugin-typescript](https://www.npmjs.com/package/gatsby-plugin-typescript)
-    -   [@types/react-helmet](https://www.npmjs.com/package/@types/react-helmet)
-    -   [tailwindcss](https://www.npmjs.com/package/tailwindcss)
-    -   [gatsby-plugin-postcss](https://www.npmjs.com/package/gatsby-plugin-postcss)
-    -   [eslint](https://www.npmjs.com/package/eslint)
-    -   [@typescript-eslint/eslint-plugin](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin)
-    -   [@typescript-eslint/parser](https://www.npmjs.com/package/@typescript-eslint/parser)
-    -   [eslint-config-prettier](https://www.npmjs.com/package/eslint-config-prettier)
-    -   [eslint-plugin-prettier](https://www.npmjs.com/package/eslint-plugin-prettier)
-    -   [eslint-plugin-react](https://www.npmjs.com/package/eslint-plugin-react)
-    -   [gatsby-plugin-purgecss](https://www.npmjs.com/package/gatsby-plugin-purgecss)
--   the files in [src/components/](./src/components/) and
-    [src/pages/](./src/pages/) have been updated with TypeScript support
--   the default Gatsby CSS file (layout.css) has been deleted; you'll find
-    [src/components/main.css](./src/components/main.css) in its place
+- displays a paginated list of movie entries (consisting of an info card
+  and metadata)
+    - on large screens the entries are displayed in groups of three
+    - movies are sourced from a PostgreSQL database using [gatsby-source-pg](https://github.com/graphile/gatsby-source-pg)
+- has simple search functionality (filtering based on movie title)
 
 ## 🚀 Quick start
 
