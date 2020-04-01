@@ -22,6 +22,9 @@ module.exports = {
                 slackey: ['Slackey', 'serif'],
                 oswald: ['Oswald', 'sans-serif'],
             },
+            width: {
+                '27p': '27%',
+            },
         },
     },
     variants: {
