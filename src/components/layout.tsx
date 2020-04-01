@@ -48,7 +48,7 @@ const Layout: FunctionComponent<LayoutProps> = ({
                 searchData={data.movieSearch.allMoviesList}
                 pageContext={pageContext}
             />
-            <main className="w-full flex flex-wrap justify-center font-oswald sm:w-9/12 m-auto md:w-3/5 lg:w-full 2xl:w-9/12 3xl:w-3/5 4xl:w-5/12">
+            <main className="w-full flex flex-wrap justify-center font-oswald sm:w-9/12 m-auto md:w-3/5 lg:w-full 2xl:w-9/12 3xl:w-3/5 4xl:w-5/12 5xl:w-4/12">
                 <div className="separator w-full my-6 h-px"></div>
                 {children}
             </main>
