@@ -32,6 +32,7 @@ module.exports = {
             },
             width: {
                 '27p': '27%',
+                '9p': '9.7%',
             },
             margin: {
                 92: '23rem',
