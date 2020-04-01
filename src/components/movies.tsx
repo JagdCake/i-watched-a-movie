@@ -173,7 +173,7 @@ const MovieTrio: FunctionComponent<MovieTrioProp> = ({
         <>
             <article
                 aria-label="Movie trio"
-                className="text-center lg:flex lg:flex-wrap lg:justify-between"
+                className="text-center lg:flex lg:flex-wrap lg:justify-between w-full"
             >
                 {threeMovies}
                 <div className="hidden lg:block lg:w-full separator my-6 h-px"></div>
