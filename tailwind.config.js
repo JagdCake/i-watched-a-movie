@@ -37,6 +37,7 @@ module.exports = {
             margin: {
                 92: '23rem',
                 184: '46rem',
+                316: '79rem',
             },
         },
     },
