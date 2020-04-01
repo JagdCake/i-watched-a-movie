@@ -116,7 +116,7 @@ const Movie: FunctionComponent<MovieProps> = (
             <div
                 aria-label="Movie entry"
                 id={movieId}
-                className="w-5/6 m-auto lg:w-1/3"
+                className="w-5/6 m-auto lg:w-1/3 xl:w-27p"
             >
                 <section
                     aria-label="Movie info card"
