@@ -13,6 +13,8 @@ module.exports = {
             '2xl': '1440px',
             // desktop
             '3xl': '1920px',
+            // big desktop
+            '4xl': '2560px',
         },
         extend: {
             colors: {
