@@ -252,7 +252,7 @@ const Header: FunctionComponent<HeaderProps> = ({
         <header className="sm:w-10/12 m-auto lg:w-2/5">
             <TitleHeading title={siteTitle} />
 
-            <nav className="flex justify-around items-center lg:justify-between">
+            <nav className="flex justify-around items-center sm:justify-between">
                 {aboutSectionVisiblity === false && (
                     <Button
                         src={aboutIcon}
