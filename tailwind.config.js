@@ -15,6 +15,8 @@ module.exports = {
             '3xl': '1920px',
             // big desktop
             '4xl': '2560px',
+            // bigger desktop
+            '5xl': '3840px',
         },
         extend: {
             colors: {
