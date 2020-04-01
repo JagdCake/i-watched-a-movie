@@ -142,7 +142,7 @@ const Movie: FunctionComponent<MovieProps> = (
                     />
                 </section>
 
-                <div className="separator my-6 h-px"></div>
+                <div className="lg:hidden separator my-6 h-px"></div>
             </div>
         </>
     );
