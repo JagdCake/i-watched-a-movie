@@ -176,7 +176,7 @@ const MovieTrio: FunctionComponent<MovieTrioProp> = ({
                 className="text-center lg:flex lg:flex-wrap lg:justify-between"
             >
                 {threeMovies}
-                <div className="separator my-6 h-px"></div>
+                <div className="hidden lg:block lg:w-full separator my-6 h-px"></div>
             </article>
         </>
     );
