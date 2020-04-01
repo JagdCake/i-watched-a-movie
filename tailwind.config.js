@@ -9,6 +9,8 @@ module.exports = {
             lg: '768px',
             // large screens
             xl: '1024px',
+            // larger screens
+            '2xl': '1440px',
         },
         extend: {
             colors: {
