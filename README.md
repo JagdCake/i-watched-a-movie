@@ -7,12 +7,17 @@ Personal movie catalogue built using Gatsby.
     - movies are sourced from a PostgreSQL database using [gatsby-source-pg](https://github.com/graphile/gatsby-source-pg)
 - has simple search functionality (filtering based on movie title)
 
-## 🚀 Quick start
+### First Time Setup
 
-1. **Choose starter version.**
-
-    - TypeScript + Tailwind CSS: move on to step 2
-    - TypeScript support only: follow the steps from [branch typescript](https://github.com/JagdCake/gatsby-typescript-tailwind-starter/tree/typescript#-quick-start)
+1. Database
+    - make sure you have PostgreSQL (version 10+) installed and running
+    - download database dump from
+      https://github.com/jagdcake/site.movies/releases
+    - extract the database dump `tar -xavf database_dump.movies.tar.xz`
+    - import the database dump using `psql -U [DATABASE USER] -d [DATABASE NAME] -1 -f movies_dump`
+    - open [gatsby-config.js](./gatsby-config.js) and update
+      `connectionString: postgres:///[DATABASE NAME FROM ABOVE]` in the
+      `gatsby-source-pg` options
 
 1. **Create a Gatsby site.**
 
