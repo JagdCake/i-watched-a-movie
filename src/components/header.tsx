@@ -17,7 +17,7 @@ interface TitleHeadingProp {
 const TitleHeading: FunctionComponent<TitleHeadingProp> = ({
     title,
 }): ReactElement => (
-    <h1 className="text-center text-2xl font-medium tracking-wide font-slackey bg-red py-3 sm:rounded-b-sm">
+    <h1 className="text-center text-2xl font-medium tracking-wide font-slackey bg-red py-3 sm:rounded-b-sm 3xl:text-3xl">
         <Link
             className="hover:font-black focus:font-black active:font-black"
             to="/"
