@@ -2,7 +2,7 @@
   "name": "i-watched-a-movie",
   "private": true,
   "description": "Personal movie catalogue.",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "Ivo Angelov <jc@jagdcake.com>",
   "dependencies": {
     "@types/react-helmet": "^5.0.15",
