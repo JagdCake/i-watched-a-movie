@@ -39,7 +39,7 @@
     "typescript",
     "tailwind"
   ],
-  "license": "MIT",
+  "license": "GPL-3.0-only",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
