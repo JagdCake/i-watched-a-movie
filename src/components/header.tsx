@@ -362,7 +362,7 @@ const Header: FunctionComponent<HeaderProps> = ({
                         email="jc@jagdcake.com"
                         contactLinks={[
                             [
-                                'https://github.com/JagdCake/site.movies',
+                                'https://github.com/JagdCake/i-watched-a-movie',
                                 'GitHub repository',
                             ],
                             [
