@@ -1,4 +1,4 @@
-## site.movies
+## I watched a Movie!
 Personal movie catalogue built using Gatsby.
 
 - displays a paginated list of movie entries (consisting of an info card
