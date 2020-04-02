@@ -108,7 +108,8 @@ const Movie: FunctionComponent<MovieProps> = (
     props: MovieProps
 ): ReactElement => {
     const movieId = props.id.toString();
-    const anchorLink = window.location.hash;
+    const anchorLink =
+        typeof window !== 'undefined' ? window.location.hash : '';
     const movieIsSelected = anchorLink === `#${movieId}`;
 
     return (
