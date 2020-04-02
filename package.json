@@ -37,7 +37,10 @@
   "keywords": [
     "gatsby",
     "typescript",
-    "tailwind"
+    "tailwind",
+    "movie",
+    "movies",
+    "catalogue"
   ],
   "license": "GPL-3.0-only",
   "scripts": {
