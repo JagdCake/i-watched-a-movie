@@ -79,8 +79,8 @@ export interface PageNavProp {
 const PageNav: FunctionComponent<PageNavProp> = ({
     pageContext,
 }: PageNavProp): ReactElement => {
-    const currentPage: number = pageContext.currentPage;
-    const totalPages: number = pageContext.numPages;
+    const currentPage: number = pageContext ? pageContext.currentPage : 1;
+    const totalPages: number = pageContext ? pageContext.numPages : 1;
 
     return (
         <nav aria-label="page navigation">
