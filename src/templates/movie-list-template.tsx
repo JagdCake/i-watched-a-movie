@@ -124,7 +124,7 @@ const MovieTriosPage: FunctionComponent<MovieData> = ({
 
     return (
         <Layout pageContext={pageContext}>
-            <SEO title="Home" />
+            <SEO title={`Page ${pageContext.currentPage}`} />
             {movieTrios}
         </Layout>
     );
