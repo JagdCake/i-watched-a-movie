@@ -1,4 +1,6 @@
 ## I watched a Movie!
+[![Netlify Status](https://api.netlify.com/api/v1/badges/db2da6dc-f14e-42ed-86a8-751c485ff2c6/deploy-status)](https://app.netlify.com/sites/friendly-swartz-e20e0e/deploys)
+
 Personal movie catalogue built using Gatsby.
 
 - displays a paginated list of movie entries (consisting of an info card
