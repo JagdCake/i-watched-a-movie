@@ -16,7 +16,7 @@ Personal movie catalogue built using Gatsby.
     - download database dump from
       https://github.com/jagdcake/i-watched-a-movie/releases
     - extract the database dump `tar -xavf database_dump.movies.tar.xz`
-    - import the database dump using `psql -U [DATABASE USER] -d [DATABASE NAME] -1 -f movies_dump`
+    - import the database dump `psql -U [DATABASE USER] -d [DATABASE NAME] < movies_dump`
     - open [gatsby-config.js](./gatsby-config.js) and update
       `connectionString: postgres:///[DATABASE NAME FROM ABOVE]` in the
       `gatsby-source-pg` options
