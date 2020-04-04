@@ -32,19 +32,7 @@ export const query = graphql`
 interface MovieData extends PageNavProp {
     data: {
         postgres: {
-            allMoviesList: [
-                {
-                    id: number;
-                    title: string;
-                    yearOfRelease: number;
-                    directors: string;
-                    topActors: string;
-                    myRating: string;
-                    watchedOn: string;
-                    imdbId: string;
-                    discussion: string;
-                }
-            ];
+            allMoviesList: MovieProps[];
         };
     };
 }
