@@ -49,26 +49,6 @@ interface MovieData extends PageNavProp {
     };
 }
 
-// Convert the directors and actors fields into arrays so they can be
-// used by the MovieTrio component.
-const movieList = (movieData: MovieData['data']): MovieProps[] => {
-    const movies = movieData.postgres.allMoviesList.map((movie) => {
-        return {
-            id: movie.id,
-            title: movie.title,
-            yearOfRelease: movie.yearOfRelease,
-            directors: movie.directors.split(','),
-            topActors: movie.topActors.split(',') as [string, string],
-            myRating: movie.myRating,
-            watchedOn: movie.watchedOn,
-            imdbId: movie.imdbId,
-            discussion: movie.discussion,
-        };
-    });
-
-    return movies;
-};
-
 type RecursiveFunction = Function;
 
 // Split the list of movies into a list of movie triples.
@@ -98,7 +78,7 @@ const MovieTriosPage: FunctionComponent<MovieData> = ({
     data,
     pageContext,
 }: MovieData): ReactElement => {
-    const movies: MovieProps[] = movieList(data);
+    const movies: MovieProps[] = data.postgres.allMoviesList;
     const targetNumberOfTrios = Math.floor(movies.length / 3);
     const trios: MovieTrioProp[] = moviesAsTrios(
         targetNumberOfTrios,
