@@ -24,7 +24,7 @@ module.exports = {
                 red: '#d05353',
             },
             transitionProperty: {
-                'height-opacity': 'height, opacity',
+                'about-section': 'height, opacity, visibility',
             },
             fontFamily: {
                 slackey: ['Slackey', 'serif'],

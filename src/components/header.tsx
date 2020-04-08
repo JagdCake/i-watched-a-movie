@@ -318,7 +318,7 @@ const Header: FunctionComponent<HeaderProps> = ({
             <article
                 aria-label="About section"
                 className={`
-                    transition-height-opacity duration-300 ease-in bg-red px-2 ${
+                    transition-about-section duration-300 ease-in bg-red px-2 ${
                         aboutSectionVisiblity === false
                             ? 'h-0 opacity-0 invisible'
                             : 'h-full opacity-100 mt-3'
