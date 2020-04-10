@@ -53,7 +53,8 @@
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "lint": "eslint --ignore-path .gitignore . --ext ts --ext tsx",
-    "deploy": "gatsby clean && gatsby build && cp _redirects public/ && netlify deploy --dir ./public"
+    "deploy": "gatsby clean && gatsby build && cp _redirects public/ && netlify deploy --dir ./public",
+    "dump-db": "pg_dump -O movies -f ./movies_dump && tar -caf database_dump.movies.tar.xz movies_dump && rm ./movies_dump"
   },
   "repository": {
     "type": "git",
