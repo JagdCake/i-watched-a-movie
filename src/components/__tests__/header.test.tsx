@@ -1,4 +1,5 @@
 import React from 'react';
+import { render, fireEvent } from '@testing-library/react';
 import Header from '../header';
 
 describe(`Header's About section`, () => {
@@ -19,4 +20,12 @@ describe(`Header's About section`, () => {
             numberOfMovies: 0,
         },
     };
+
+    it(`should be hidden by default`, () => {
+        const { getByLabelText } = render(<Header {...mockHeaderProps} />);
+
+        const aboutSection = getByLabelText(/about section/i);
+        expect(aboutSection).toHaveClass('h-0', 'opacity-0', 'invisible');
+    });
+
 });
