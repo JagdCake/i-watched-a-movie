@@ -28,4 +28,24 @@ describe(`Header's About section`, () => {
         expect(aboutSection).toHaveClass('h-0', 'opacity-0', 'invisible');
     });
 
+    it(`should have it's visibility toggled on click of the About section button`, () => {
+        const { getByLabelText, getByTitle } = render(
+            <Header {...mockHeaderProps} />
+        );
+        const aboutSection = getByLabelText(/about section/i);
+
+        const aboutSectionButton = getByTitle(/open.*about/i);
+        // open About section
+        fireEvent.click(aboutSectionButton);
+
+        expect(aboutSection).not.toHaveClass('h-0', 'opacity-0', 'invisible');
+        expect(aboutSection).toHaveClass('h-full', 'opacity-100', 'mt-3');
+
+        const aboutSectionCloseButton = getByTitle(/close.*about/i);
+        // close About section
+        fireEvent.click(aboutSectionCloseButton);
+
+        expect(aboutSection).not.toHaveClass('h-full', 'opacity-100', 'mt-3');
+        expect(aboutSection).toHaveClass('h-0', 'opacity-0', 'invisible');
+    });
 });
