@@ -60,7 +60,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "test": "jest",
     "lint": "eslint --ignore-path .gitignore . --ext ts --ext tsx",
     "deploy": "gatsby clean && gatsby build && cp _redirects public/ && netlify deploy --dir ./public",
     "dump-db": "pg_dump -O movies -f ./movies_dump && tar -caf database_dump.movies.tar.xz movies_dump && rm ./movies_dump"
