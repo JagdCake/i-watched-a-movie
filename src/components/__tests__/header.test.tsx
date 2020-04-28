@@ -27,6 +27,19 @@ describe(`Search box`, () => {
         const searchBox = getByDisplayValue(/\d+ movies/);
         expect(searchBox).toBeTruthy();
     });
+
+    it(`should be cleared and ready to accept search terms when enabled`, () => {
+        const { getByDisplayValue, getByTitle } = render(
+            <Header {...mockHeaderProps} />
+        );
+
+        const searchButton = getByTitle(/enable.*search/i);
+        fireEvent.click(searchButton);
+
+        const searchBox = getByDisplayValue('') as HTMLInputElement;
+        expect(searchBox).toBeTruthy();
+        expect(searchBox).not.toBeDisabled();
+    });
 });
 
 describe(`Header's About section`, () => {
