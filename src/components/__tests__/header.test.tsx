@@ -20,6 +20,14 @@ const mockHeaderProps = {
     },
 };
 
+describe(`Search box`, () => {
+    it(`should display number of movies by default`, () => {
+        const { getByDisplayValue } = render(<Header {...mockHeaderProps} />);
+
+        const searchBox = getByDisplayValue(/\d+ movies/);
+        expect(searchBox).toBeTruthy();
+    });
+});
 
 describe(`Header's About section`, () => {
     it(`should be hidden by default`, () => {
