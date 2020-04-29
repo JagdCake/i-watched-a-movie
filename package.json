@@ -63,6 +63,7 @@
     "test": "jest",
     "lint": "eslint --ignore-path .gitignore . --ext ts --ext tsx",
     "deploy": "npm test && gatsby clean && gatsby build && cp _redirects public/ && netlify deploy --dir ./public --open",
+    "deploy-prod": "netlify deploy --dir ./public --prod --open",
     "dump-db": "pg_dump -O movies -f ./movies_dump && tar -caf database_dump.movies.tar.xz movies_dump && rm ./movies_dump"
   },
   "repository": {
