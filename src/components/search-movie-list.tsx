@@ -5,16 +5,19 @@ import { MovieLinkListProps, MovieSearchData } from './movie-list';
 import MovieLinkList from './movie-list';
 
 const normalizedValue: Function = (value: string): string => {
-    const specialCharacters = /[|`|~|!|@|#|$|%|^|&|*|(|)|_|||+|\|\-|=|?|;|:|'|"|,|.|<|>|\{|\}|\[|\]|\\|\/]/g;
+    const specialCharacters = /[|`|~|!|@|#|$|%|^|*|(|)|_|||+|\|\-|=|?|;|:|'|"|,|.|<|>|\{|\}|\[|\]|\\|\/]/g;
     const twoOrMoreSpaces = /\s{2,}/g;
+    const ampersand = /&/g;
     const nothing = '';
     const oneSpace = ' ';
+    const and = 'and';
 
     return value
         .trim()
         .toLowerCase()
         .replace(specialCharacters, nothing) // removing special characters can leave more than two spaces
-        .replace(twoOrMoreSpaces, oneSpace);
+        .replace(twoOrMoreSpaces, oneSpace)
+        .replace(ampersand, and);
 };
 
 const matchSearch: Function = (
