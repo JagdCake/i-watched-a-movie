@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-const mockMovieLinkListProps = (movieData: Array<{}> = []) => {
+const mockMovieLinkListProps = (movieData: Array<{}> = [], pageContext: {}) => {
     return {
         displayStatus: true,
         movieData: [
@@ -12,13 +12,7 @@ const mockMovieLinkListProps = (movieData: Array<{}> = []) => {
             },
             ...movieData,
         ],
-        pageContext: {
-            first: 1,
-            offset: 0,
-            numPages: 1,
-            currentPage: 1,
-            numberOfMovies: movieData.length,
-        },
+        pageContext: pageContext,
         handleClick: () => {
             return;
         },
