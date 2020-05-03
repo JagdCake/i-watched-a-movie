@@ -18,3 +18,26 @@ const mockMovieLinkListProps = (movieData: Array<{}> = [], pageContext: {}) => {
         },
     };
 };
+
+describe(`if there are 2 movies and you want 1 per page`, () => {
+    const aSecondMovie = [
+        {
+            id: 2,
+            title: 'Test Movie 2',
+            yearOfRelease: 2020,
+        },
+    ];
+
+    const numberOfMovies = 2;
+    const moviesPerPage = 1;
+    const currentPage = 1;
+    const numberOfPages = numberOfMovies / moviesPerPage;
+
+    const pageContextForTwoMovies = {
+        first: moviesPerPage,
+        offset: moviesPerPage * currentPage,
+        numPages: numberOfPages,
+        currentPage: currentPage,
+        numberOfMovies: numberOfMovies,
+    };
+});
