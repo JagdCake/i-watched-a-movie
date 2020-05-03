@@ -5,12 +5,12 @@ const mockMovieLinkListProps = (movieData: Array<{}> = [], pageContext: {}) => {
     return {
         displayStatus: true,
         movieData: [
+            ...movieData,
             {
                 id: 1,
                 title: 'Test Movie',
                 yearOfRelease: 2020,
             },
-            ...movieData,
         ],
         pageContext: pageContext,
         handleClick: () => {
