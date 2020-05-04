@@ -45,4 +45,11 @@ module.exports = {
         textColor: ['responsive', 'hover', 'focus', 'active', 'focus-within'],
     },
     plugins: [],
+    purge: {
+        content: ['./src/**/*.tsx', './src/**/*.jsx'],
+        // PurgeCSS options
+        options: {
+            whitelist: [],
+        },
+    },
 };
