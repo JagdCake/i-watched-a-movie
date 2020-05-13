@@ -42,7 +42,7 @@ const Layout: FunctionComponent<LayoutProps> = ({
     `);
 
     return (
-        <div className="text-black bg-black">
+        <div className="text-black">
             <Header
                 siteTitle={data.site.siteMetadata.title}
                 searchData={data.movieSearch.allMoviesList}
