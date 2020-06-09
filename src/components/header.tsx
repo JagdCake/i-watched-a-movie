@@ -366,7 +366,7 @@ const Header: FunctionComponent<HeaderProps> = ({
                                 'GitHub repository',
                             ],
                             [
-                                'https://data.jagdcake.com/',
+                                'https://movie-data.jagdcake.com/',
                                 'Data on watched movies',
                             ],
                         ]}
