@@ -60,7 +60,7 @@ const MovieLinkList: FunctionComponent<MovieLinkListProps> = ({
             lastPage
         );
 
-        const linkToMovie = `page/${pageWhereTheMovieIs}#${movie.id}`;
+        const linkToMovie = `/page/${pageWhereTheMovieIs}#${movie.id}`;
         return (
             <li
                 key={movie.id}
