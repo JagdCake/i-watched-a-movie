@@ -81,7 +81,7 @@ const MovieTriosPage: FunctionComponent<MovieData> = ({
                 <>
                     <MovieTrio key={index} movies={trio.movies} />
                     <BackToTopLink
-                        linkToTopOfWindow={`page/${pageContext.currentPage}`}
+                        linkToTopOfWindow={`/page/${pageContext.currentPage}`}
                     />
                 </>
             );

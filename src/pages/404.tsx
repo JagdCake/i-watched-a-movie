@@ -13,7 +13,7 @@ const NotFoundPage: FunctionComponent = (): ReactElement => (
             <h1 className="text-6xl text-red">PAGE NOT FOUND</h1>
             <p className="text-white text-2xl">
                 Please return to the&nbsp;
-                <Link to="page/1" className="underline">
+                <Link to="/page/1" className="underline">
                     first page.
                 </Link>
             </p>
