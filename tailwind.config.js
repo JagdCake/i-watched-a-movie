@@ -43,6 +43,9 @@ module.exports = {
     },
     variants: {
         textColor: ['responsive', 'hover', 'focus', 'active', 'focus-within'],
+        extend: {
+            fontWeight: ['hover', 'focus'],
+        },
     },
     plugins: [],
     purge: {
