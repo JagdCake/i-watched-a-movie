@@ -52,7 +52,7 @@ module.exports = {
         content: ['./src/**/*.tsx', './src/**/*.jsx'],
         // PurgeCSS options
         options: {
-            whitelist: [],
+            safelist: [],
         },
     },
 };
